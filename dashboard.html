@@ -1,0 +1,214 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashabul Kahfi Projek</title>
+    <style>
+        body{
+            background-color: #ACBCFF;
+            margin: 0px;
+            padding: 0px;
+            padding-bottom: 100px;
+        }
+        .navigation{
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            background-color: #AEE2FF;
+            display: flex;
+            justify-content: end;
+        }
+
+        .navigation > a{
+            text-decoration: none;
+            color: black;
+            margin: 22px;
+        }
+
+        .dashboard{
+            
+            flex-direction: column;
+            position: fixed;
+            top: 70px;
+            background-color: #4C3D3D;
+            height: 100%;
+            width: 145px;
+        }
+
+        .dashboard > div{
+            
+            background-color: #E6FFFD;
+            width: 140px;
+            height: 30px;
+        }
+
+        .dashboard > div > p{
+            text-align: center;
+            color: red;
+            font-size: 20px;
+        }
+        .dashboard > div:hover{
+            background-color:#96d4f5 ;
+        }
+
+        .content{
+            display: grid;
+            grid-template-columns: repeat(3,0.3fr)
+            
+            
+        }
+
+        .content > div{
+            /*Ganti*/
+            width: 160px; 
+            height: 200px;
+            background-color: rgb(229, 236, 234);
+            bottom: 100px;
+            margin-left: auto;
+            margin-bottom: 50px;
+            margin-top: 50ox;
+            border-radius: 20px;
+            
+
+        }
+        .content > div > p{
+            text-align: center;
+        }
+
+        .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        }
+        
+        .comment-box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: none;
+        }
+        
+        .comment-form textarea {
+        width: 100%;
+        height: 100px;
+        resize: vertical;
+        }
+        footer {
+        background-color: #AEE2FF;
+        padding: 3px;
+        text-align: center;
+        font-size: 11px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        }
+        .bok4 > p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: smaller;
+            margin-top: 25%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .bok4:hover{
+            background-color: yellowgreen;
+
+        }
+
+
+        .bok2 > p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: smaller;
+            margin-top: 15%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .bok2:hover{
+            background-color: yellowgreen;
+
+        }
+        .bok6 > p{
+            
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: smaller;
+            margin-top: 15%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .bok6:hover{
+            background-color: yellowgreen;
+
+        }
+        .bok1 > img{
+            width: 170px;
+            height: 210px;
+            border-radius: 10%;
+        
+        }
+        .bok3 > img{
+            width: 170px;
+            height: 210px;
+            border-radius: 10%;
+        
+        }
+        .bok5 > img{
+            width: 170px;
+            height: 210px;
+            border-radius: 10%;
+        
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">Login</a>
+    </div>
+    <div class="dashboard">
+        <div class="box1"><a href="dashboard.html"><p>Home</p></a></div>
+        <div class="box2"><a href="literasi.html"><p>Literasi</p></a></div>
+        <div class="box3"><a href="latihan.html"><p>Latihan</p></a></div>
+        <div class="box4"><p>Ujian</p></div>
+        <div class="box5"><p>Live Coding</p></div>
+    </div><br><br><br><br><br><br><br>
+    <div class="content">
+        <div class="bok1"><img src="materi.jpg" alt="materi" width="100%" height="100%"></div>
+        <div class="bok3"><img src="latihan.jpg" alt="latihan" width="100%" height="100%"></div>
+        <div class="bok5"><img src="ujian.jpg" alt="ujian" width="110%" height="110%"></div>
+        <div class="bok4"><p><b>Masih bingung terkait materi perulangan dan percabangan pada Python ? 
+            <br>Gunakan fitur “Literasi” agar kamu lebih tau lagi terkait materi tersebut</b></p></div>
+        <div class="bok2"><p><b>Ingin mencoba menjawab soal-soal latihan terkait materi perulangan dan percabangan ?
+            <br>Gunakan fitur “Latihan” agar kamu  bisa menjawab soal - soal berkaitan materi tersebut.</b></div>
+        <div class="bok6"><p><b>Ingin mengatahui seberapa jauh kemampuan kamu ? 
+            <br>Gunakan fitur “Evaluasi“ untuk mengetahui sampai mana kamu memahami materi yang sudah kamu pelajari.</b></p></div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="container">
+            <br><br>
+            <div class="comment-box">
+              <h3>Tinggalkan Komentar</h3>
+              <form class="comment-form">
+                <textarea name="comment" placeholder="Tulis komentar Anda..."></textarea>
+                <br>
+                <button type="submit">Kirim</button>
+              </form>
+        </div>  
+    </div>
+    <br>
+
+    <footer>
+        <p>Ashabul Kahfi</p>
+        <p>Hak Cipta &copy; 2023</p>
+    </footer>
+</body>
+</html>
