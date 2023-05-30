@@ -29,6 +29,71 @@
           position: fixed;
           width: auto;
         }
+
+        .content{
+          display: flex;
+        }
+
+        .contentKiri{
+          width: 10%;
+          height: 1000px;
+          background-color: #AEE2FF;
+        }
+
+        .contentKanan{
+          width: 90%;
+          height: 1000px;
+          background-color: #64aa09;
+          transition: 1s;
+        }
+
+        .contentKiri > div{
+          text-align: center;
+          flex-direction: column;
+          width: 80%;
+          height: 30px;
+          background-color: aliceblue;
+          margin: 18px;
+        }
+
+        .latihan{
+          width: 90%;
+          height: 50px;
+          text-align: center;
+          background-color: bisque;
+          margin: 20px;
+          margin-left: 100px;
+        }
+
+        .soal{
+          width: 70%;
+          height: 50px;
+          background-color: bisque;
+          text-align: center;
+          margin: 20px;
+          margin-left: 270px;
+        }
+
+        .kumpulanSoal{
+          display: flex;
+        }
+
+        .kumpulanSoal > div{
+          width: 30%;
+          background-color: grey;
+          height: 160px;
+          margin: 40px;
+          text-align: center;
+        }
+
+        .kumpulanSoal > div p{
+          position: relative;
+          top: 60px;
+        }
+
+        .kumpulanSoal > div:hover{
+          background-color: aquamarine;
+        }
     </style>
 </head>
   <body style="font-family: Verdana, Geneva, Tahoma, sans-serif">
@@ -67,71 +132,41 @@
           </div>
         </nav>
       </section>
-
-    
-
-    <!-- Konten NavBar -->
-    <section>
-      <div class="row m-sm-5 text-center p-3 " style="background-color: wheat">
-        <h5>LATIHAN</h5>
+      
+      
+    <div class="content">
+      <div class="contentKiri">
+        <div class="box1"><a href="dashboard.html"><p>Home</p></a></div>
+        <div class="box2"><a href="literasi.html"><p>Literasi</p></a></div>
+        <div class="box3"><a href="latihan.html"><p>Latihan</p></a></div>
+        <div class="box4"><p>Ujian</p></div>
+        <div class="box5"><p>Live Coding</p></div>
       </div>
-    </section>
-    <section>
-      <div class="container mt-5 text-center p-3" style="background-color: #a2d9ff">
-        <h5>Ini Soal</h5>
-      </div>
-    </section>
+      <div class="contentKanan">
+        <div class="latihan">
+          <h1>Latihan</h1>
 
-    <!-- Soal-->
-    <section id="banksoal">
-      <div class="row m-sm-5">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text text-center">
-                <label for="pilihan1A">
-                  <div name="Nomor1" id="pilihan1A" class="jawaban1">A. function nama_fungsi()</div><br></label>
-              </p>
-            </div>
-          </div>
         </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <div onclick="">
-                <p class="card-text text-center">
-                  <label for="pilihan1B">
-                    <div name="Nomor1" id="pilihan1B" >B. function => nama_fungsi()</div><br></label>
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="soal">
+          <p class="soale">Soal</p>
         </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text text-center">
-                <label for="pilihan1C">
-                  <div name="Nomor1" id="pilihan1C">C. function : nama_fungsi()</div><br></label>
-              </p>
-            </div>
+        <div class="kumpulanSoal">
+          <div class="jawaban1" onclick="funcJawabanA()">
+            <p></p>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text text-center">
-                <label for="pilihan1D">
-                  <div name="Nomor1" id="pilihan1D">D. function [nama_fungsi]</div><br></label>
-              </p>
-            </div>
+          <div class="jawaban2" onclick="funcJawabanB()">
+            <p></p>
+          </div>
+          <div class="jawaban3" onclick="funcJawabanC()">
+            <p></p>
+          </div>
+          <div class="jawaban4" onclick="funcJawabanD()">
+            <p></p>
           </div>
         </div>
       </div>
-    </section>
-    <footer>
-        <p>Ashabul Kahfi</p>
-        <p>Hak Cipta &copy; 2023</p>
-    </footer>
+    </div>
+    <script src="e-learning_1.js"></script>
   </body>
-</html>
+
+
