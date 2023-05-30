@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation {
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            background-color: #AEE2FF;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navigation > a {
+            text-decoration: none;
+            color: black;
+            margin: 22px;
+        }
+
+        .dashboard {
+            flex-direction: column;
+            position: fixed;
+            top: 70px;
+            background-color: #4C3D3D;
+            height: 100%;
+            width: 140px;
+        }
+
+        .dashboard > div {
+            background-color: #E6FFFD;
+            width: 140px;
+            height: 30px;
+        }
+
+        .dashboard > div > p {
+            text-align: center;
+            color: red;
+            font-size: 20px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(1, 0.3fr);
+        }
+
+        .content > div {
+            /* Ganti */
+            width: 1250px; 
+            height: auto;
+            background-color: aquamarine;
+            position: relative;
+            top: 100px;
+            left: 400px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">Login</a>
+    </div>
+    <div class="dashboard">
+        <div class="box1"><a href="dashboard.html"><center><p style="color: red;">Home</p></center></a></div>
+        <div class="box2"><a href="literasi.html"><center><p style="color: red;">Literasi</p></center></a></div>
+        <div class="box3"><a href="latihan.html"><center><p style="color: red;">Latihan</p></center></a></div>
+        <div class="box4"><p>Ujian</p></div>
+        <div class="box5"><p>Live Coding</p></div>
+    </div>
+    <div class="content">
+        <div class="bok1" style="height: 100px;"><h2 align="left">PERULANGAN (for)</h2></div>
+        <div class="bok2">
+            <h1>Apa itu Perulangan?</h1>
+            <p>
+                &emsp14; Membuat suatu program tidak akan lepas dari perulangan atau looping. Misalkan saja kita ingin membuat minuman teh hangat untuk 10 tamu, tentunya kita akan mengulang proses membuat teh hangat sebanyak 10 kali. Inilah yang disebut dengan perulangan. <br>
+                Untuk lebih jelasnya perhatikan algoritma berikut :
+                <ol>
+                    <li>Mulai</li>
+                    <li>Nilai x = 15</li>
+                    <li>Selama x > 10 maka kerjakan langkah 5 sampai 6</li>
+                    <li>Tampilkan nilai = x,</li>
+                    <li>Nilai x = x - 1</li>
+                    <li>Selesai</li>
+                </ol>  
+                &emsp14; Algoritma diatas menunjukkan adanya perulangan, yaitu akan diulang selama nilai x masih kurang dari 10 dan akan berhenti jika nilai x sama dengan 10. Sekarang perhatikan algoritma perulangan yang lain :
+                <ol>
+                    <li>Mulai</li>
+                    <li>Nilai x = 15</li>
+                    <li>Tampilkan nilai = x,</li>
+                    <li>Nilai x = x - 1</li>
+                    <li>Selama x > 10 maka kembali ke langkah 3</li>
+                    <li>Selesai</li>
+                </ol>  
+                Algoritma ini juga menunjukkan adanya perulangan, yang mana akan mengulang langkah ketika nilai x masih kurang dari 10. Lalu apakah bedanya?? <br><br>
+                Mari kita ulas lebih mendetail, jika kita jalankan algoritma diatas, maka sistem akan memberikan hasil seperti berikut : <br><br>
+                <b>nilai = 15, nilai = 14, nilai = 13, nilai = 12, nilai = 11</b><br><br>
+                &emsp14; Jika diperhatikan hasilnya maka terlihat sama saja, namun secara proses berbeda, algoritma pertama akan melakukan cek terlebih dahulu kemudian memprosesnya sedangkan algoritma kedua akan memproses dulu baru melakukan cek. Apa yang di cek? Sistem akan melakukan cek pada kondisi yang diberikan, yang pada kasus ini adalah ketika x bernilai sama dengan 10. <br>
+                &emsp14; Untuk diagram alir (flowchart) dari algoritma diatas adalah:
+            </p>
+            <center><img src="https://2.bp.blogspot.com/-O1f3zSh1T8M/V09rQTIMZ3I/AAAAAAAAAME/I8ss3SPpwoYXgrirXOGNLG_KrhT0hVRCgCLcB/s1600/Untitled.png" alt="perulangan_1" style="height: 450px;"><p>Gambar 1. Flowchart Perulangan For</p></center>
+            <p>
+                Gambar diatas menunjukkan bahwa pengecekan perulangan berada sebelum proses
+            </p>
+            <center><img src="https://1.bp.blogspot.com/-Vwtn2yNaJAU/V09rbhR9WnI/AAAAAAAAAMI/npz2uS9ynh436Dt_HpXK5iUA5xg8QYPaQCLcB/s1600/Untitled.png" alt="perulangan_2" style="height: 500px;"><p>Gambar 2. Flowchart Perulangan Do While</p></center><br><br>
+            <p>
+                Gambar diatas menunjukkan bahwa pengecekan perulangan berada setelah proses.
+            </p><br>
+            <h2>Pengaplikasian Perulangan dalam program (code)</h2>
+        </div>
+    </div>
+</body>
+</html>
