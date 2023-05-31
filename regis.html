@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<style>
+		body {
+			background-color:#FFFFFF;
+			font-family: sans-serif;
+			
+		}
+
+		.register-form {
+			background-color: rgb(61, 176, 138);
+			border-radius: 10px;
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+						0 10px 10px rgba(0,0,0,0.22);
+			margin: 50px auto;
+			padding: 50px;
+			width: 80%;
+			max-width: 600px;
+		}
+		a{
+            text-decoration: none;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+			text-align: center;
+			color: #020202;
+			
+			
+
+		}
+
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-top: 20px;
+		}
+
+		label {
+			display: block;
+			font-size: 16px;
+			margin-bottom: 5px;
+			width: 100%;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		select,
+		textarea {
+			border: none;
+			border-radius: 5px;
+			box-sizing: border-box;
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+
+		select {
+			height: 40px;
+		}
+
+		textarea {
+			resize: none;
+		}
+
+		button[type="submit"] {
+			background-color: #caced1;
+			border: none;
+			border-radius: 20px;
+			color: #070000;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+			margin-top: 20px;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			transition: background-color 0.3s ease;
+		}
+
+		button[type="submit"]:hover {
+			background-color: #d0f612;
+			color: #000000;
+		}
+		a {
+			color: #000000;
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="register-form">
+		<hr color="black"><h1><b>Register</b></h1><hr color="black">
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+			<label for="gender">Gender:</label>
+			<select id="gender" name="gender" required>
+				<option value="">--Choose your gender--</option>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>
+
+			<label for="address">Address:</label>
+			<textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+	
+		</form>
+		<button type="submit"><a href="login.html">Register</a></button>
+	</div>
+</body>
+</html>

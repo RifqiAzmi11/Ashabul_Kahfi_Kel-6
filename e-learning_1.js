@@ -10,7 +10,26 @@ let soal = {"soal1" : {"persoalan" : "Pernyataan yang digunakan untuk mengulang 
                         "jawabanB" : "Perulangan for",
                         "jawabanC" : "Perulangan do-while",
                         "jawabanD" : "Perulangan if",
-                        "jawabanBenar" : "JawabanB"}
+                        "jawabanBenar" : "JawabanA"},
+            "soal3" : {"persoalan" : "Berikut yang digunakan untuk mengevaluasi beberapa kondisi secara berurutan adalah: ",
+                        "jawabanA" : "if-else statement ",
+                        "jawabanB" : "if statement ",
+                        "jawabanC" : "elif statement ",
+                        "jawabanD" : "for statement",
+                        "jawabanBenar" : "JawabanC"},
+            "soal4" : {"persoalan" : "Pernyataan yang digunakan untuk menghentikan perulangan dan keluar dari pernyataan pengulangan adalah ",
+                        "jawabanA" : "break",
+                        "jawabanB" : "continue",
+                        "jawabanC" : "pass ",
+                        "jawabanD" : "exit",
+                        "jawabanBenar" : "JawabanA"},
+            "soal5" : {"persoalan" : "Pernyataan yang digunakan untuk mengeksekusi serangkaian pernyataan tergantung pada kondisi yang diberikan adalah:  ",
+                        "jawabanA" : "Percabangan ",
+                        "jawabanB" : "Perulangan",
+                        "jawabanC" : "Fungsi",
+                        "jawabanD" : "Kondisi",
+                        "jawabanBenar" : "JawabanA"}
+
     }
 
 
@@ -59,18 +78,3 @@ function cekJawaban(){
     }
 
     
-
-    
-
-
-
-
-
-
-//Function
-function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;}
-
-function randomFloat(min, max, decimals) {
-    const str = (Math.random() * (max - min) + min).toFixed(decimals);
-    return parseFloat(str);}
