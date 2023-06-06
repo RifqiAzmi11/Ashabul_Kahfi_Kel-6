@@ -1,4 +1,3 @@
-let kunci_jawaban = ["jawaban_1b","jawaban_2b","jawaban_3b","jawaban_4d","jawaban_5a"]
 let soal = {"soal1" : {"persoalan" : "Pernyataan yang digunakan untuk mengulang blok kode tertentu selama kondisi terpenuhi disebut sebagai: ",
                         "jawabanA" : "Percabangan",
                         "jawabanB" : "Perulangan",
@@ -28,8 +27,31 @@ let soal = {"soal1" : {"persoalan" : "Pernyataan yang digunakan untuk mengulang 
                         "jawabanB" : "Perulangan",
                         "jawabanC" : "Fungsi",
                         "jawabanD" : "Kondisi",
+                        "jawabanBenar" : "JawabanA"},
+            "soal6" : {"persoalan" : "Apa output dari kode berikut? <br> pythonCopy code <br> for i in range(1, 6): <br>     if i == 3: <br>        continue <br>     print(i)" ,
+                        "jawabanA" : "1 2 3 4 5",
+                        "jawabanB" : "1 2 4 5 ",
+                        "jawabanC" : "1 2 3 4 ",
+                        "jawabanD" : "1 2 3 4 5 6",
+                        "jawabanBenar" : "JawabanB"},
+            "soal7" : {"persoalan" : "pythonCopy code <br> x = 10 <br> if x > 5: <br>    print('x lebih besar dari 5') <br>elif x < 5: <br>    print('x kurang dari 5')<br>else:<br>    print('x sama dengan 5')" ,
+                        "jawabanA" : "x lebih besar dari 5 ",
+                        "jawabanB" : "x kurang dari 5 ",
+                        "jawabanC" : "x sama dengan 5 ",
+                        "jawabanD" : "Tidak ada output",
+                        "jawabanBenar" : "JawabanA"},
+            "soal8" : {"persoalan" : "numbers = [1, 2, 3, 4, 5]<br>for num in numbers:<br>    if num % 2 == 0:<br>        print(num)" ,
+                        "jawabanA" : "1 2 3 4 5 ",
+                        "jawabanB" : "1 3 5 ",
+                        "jawabanC" : "2 4",
+                        "jawabanD" : "Tidak ada output",
+                        "jawabanBenar" : "JawabanC"},
+            "soal9" : {"persoalan" : "while count < 5:<br>    print(count)<br>    count += 1" ,
+                        "jawabanA" : "0 1 2 3 4 ",
+                        "jawabanB" : "1 2 3 4 5  ",
+                        "jawabanC" : "0 1 2 3 ",
+                        "jawabanD" : "1 2 3 4",
                         "jawabanBenar" : "JawabanA"}
-
     }
 
 
@@ -56,25 +78,48 @@ function funcJawabanD() {
     jawaban = "JawabanD"
     cekJawaban()
 }
-let nomorSoal = 1
+let nomorSoal = 0
 
 
 
 function cekJawaban(){
+    nomorSoal += 1
+    if(jawaban == soal[`soal${nomorSoal}`]["jawabanBenar"]){
+        document.querySelector(`.${jawaban}`).style.background="green"
+    }
+    else(
+        document.querySelector(`.${jawaban}`).style.background="red"
+    )
+
     console.log(nomorSoal)
     console.log("Test")
-    document.querySelector(".soale").innerHTML = soal[`soal${nomorSoal}`]["persoalan"]
-    document.querySelector(".jawaban1 > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanA"]
-    document.querySelector(".jawaban2 > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanB"]
-    document.querySelector(".jawaban3 > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanC"]
-    document.querySelector(".jawaban4 > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanD"]
+    console.log(jawaban)
+    setTimeout(function (){
+        document.querySelector(`.${jawaban}`).style.background="grey"
+        document.querySelector(".soale").innerHTML = soal[`soal${nomorSoal}`]["persoalan"]
+        document.querySelector(".JawabanA > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanA"]
+        document.querySelector(".JawabanB > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanB"]
+        document.querySelector(".JawabanC > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanC"]
+        document.querySelector(".JawabanD > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanD"]
+    },3000)
 
     
-    if(jawaban == soal[`soal${nomorSoal}`]["jawabanBenar"]){
-        console.log("Benar")
+
+
+
     }
 
-    nomorSoal += 1
+function tampilkanSoal(){
+    document.querySelector(".kumpulanSoal").style.display="flex"
+    document.querySelector(".soal").style.display="block"
+    document.querySelector(".mulai").style.display="none"
+    document.querySelector(".soale").innerHTML = soal["soal1"]["persoalan"]
+    document.querySelector(".JawabanA > p").innerHTML = soal["soal1"]["jawabanA"]
+    document.querySelector(".JawabanB > p").innerHTML = soal["soal1"]["jawabanB"]
+    document.querySelector(".JawabanC > p").innerHTML = soal["soal1"]["jawabanC"]
+    document.querySelector(".JawabanD > p").innerHTML = soal["soal1"]["jawabanD"]
+    if(jawaban == soal["soal1"]["jawabanBenar"]){
+        console.log("Bujur")
     }
-
+}
     

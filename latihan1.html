@@ -70,15 +70,17 @@
 
         .soal{
           width: 70%;
-          height: 50px;
+          height: auto;
+          padding: 5px;
           background-color: bisque;
           text-align: center;
           margin: 20px;
           margin-left: 270px;
+          display: none;
         }
 
         .kumpulanSoal{
-          display: flex;
+          display: none;
         }
 
         .kumpulanSoal > div{
@@ -128,6 +130,21 @@
             margin: 15px;
         }
 
+        .mulai{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;  
+          position: relative;       
+          top: 30px;
+          left: 425px;
+        }
+        .mulai > button {
+          width: 100px;
+        }
+        .jawabanA,.jawabanB,.jawabanC,.jawabanD{
+          background: grey;
+        }
+
     </style>
 </head>
   <body style="font-family: Verdana, Geneva, Tahoma, sans-serif">
@@ -152,20 +169,24 @@
           <h1>Latihan</h1>
 
         </div>
+        <div class="mulai">
+          <p>aturan</p>
+          <button onclick="tampilkanSoal()">Mulai</button>
+        </div>
         <div class="soal">
           <p class="soale">Soal</p>
         </div>
         <div class="kumpulanSoal">
-          <div class="jawaban1" onclick="funcJawabanA()">
+          <div class="JawabanA" onclick="funcJawabanA()">
             <p></p>
           </div>
-          <div class="jawaban2" onclick="funcJawabanB()">
+          <div class="JawabanB" onclick="funcJawabanB()">
             <p></p>
           </div>
-          <div class="jawaban3" onclick="funcJawabanC()">
+          <div class="JawabanC" onclick="funcJawabanC()">
             <p></p>
           </div>
-          <div class="jawaban4" onclick="funcJawabanD()">
+          <div class="JawabanD" onclick="funcJawabanD()">
             <p></p>
           </div>
         </div>
