@@ -78,19 +78,22 @@ function funcJawabanD() {
     jawaban = "JawabanD"
     cekJawaban()
 }
-let nomorSoal = 0
+
+let nomorSoal = 1
 
 
-
+let nilai = 0
 function cekJawaban(){
-    nomorSoal += 1
+
     if(jawaban == soal[`soal${nomorSoal}`]["jawabanBenar"]){
         document.querySelector(`.${jawaban}`).style.background="green"
+        nilai += 10
     }
     else(
         document.querySelector(`.${jawaban}`).style.background="red"
     )
-
+    nomorSoal += 1                      
+    
     console.log(nomorSoal)
     console.log("Test")
     console.log(jawaban)
@@ -101,13 +104,11 @@ function cekJawaban(){
         document.querySelector(".JawabanB > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanB"]
         document.querySelector(".JawabanC > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanC"]
         document.querySelector(".JawabanD > p").innerHTML = soal[`soal${nomorSoal}`]["jawabanD"]
-    },3000)
-
-    
-
-
-
+    },1500)
+    document.querySelector(".skor > p").innerHTML = nilai
+    console.log("nilai",nilai)
     }
+
 
 function tampilkanSoal(){
     document.querySelector(".kumpulanSoal").style.display="flex"
@@ -120,6 +121,21 @@ function tampilkanSoal(){
     document.querySelector(".JawabanD > p").innerHTML = soal["soal1"]["jawabanD"]
     if(jawaban == soal["soal1"]["jawabanBenar"]){
         console.log("Bujur")
+
     }
 }
+
+
+const navbarMenu = document.getElementById('navbarMenu');
+const content = document.getElementsByClassName('content')[0];
+
+navbarMenu.addEventListener('mouseover', function() {
+    navbarMenu.style.left = '0';
+    ;
+});
+
+navbarMenu.addEventListener('mouseout', function() {
+    navbarMenu.style.left = '-200px';
+    content.style.marginLeft = '0';
+});
     

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>perulangan</title>
+    <style>
+        
+        body{
+            background-color: #DDE6ED;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .navbar-info {
+            background-color: #526D82;
+            color: rgb(241, 0, 0);
+            text-align: right;
+            padding: 20px;
+            height: 20px;
+        }
+
+        .navbar-info img{
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            position: relative;
+            bottom: 15px;
+            right: 1260px;
+        }
+
+        .navbar-info a {
+            position: relative;
+            bottom: 35px;
+            background: #3e95ff;
+            border-radius: 20px;
+            padding: 15px 20px 15px 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar-info a:hover {
+            background: #fc5185;
+            text-decoration: underline;
+        }
+
+        .navbar-menu {
+        position: fixed;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        transition: left 0.8s;
+        text-align: center;
+        }
+
+        .navbar-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 100px;
+        }
+
+        .navbar-menu li {
+        margin-bottom: 10px;
+        }
+
+        .navbar-menu a {
+        color: black;
+        text-decoration: none;
+        }
+
+        .navbar-menu a:hover {
+        color: rgb(87, 87, 255);
+        }
+       
+        .containers{
+            display: flex;
+        }
+
+        .contentKanan{
+          width: 90%;
+          height: 1000px;
+          transition: 1s;
+          border-radius: 15%
+        }
+
+
+        .literasi{
+          width: auto;
+          height: 50px;
+          background-color: #415777;
+          margin-left: 230px;
+          border-radius: 3%;
+          font-family: Arial, Helvetica, sans-serif;
+          color: rgb(255, 248, 248);
+        }  
+           
+        .materi{
+            width: 99%;
+            height: auto;
+            background-color: #415777;
+            margin-top: 40px;
+            padding-left: 10px;
+            border-radius: 5px;
+
+        }
+        
+
+        #copyright {
+            text-align: center;
+            width: 100%;
+            padding: 50px 10px -100px 0px;
+            text-align: center;
+            position: relative;
+            top: 1050px;
+            left: 40px;
+        }
+
+        .background{
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #2bd531;
+          color: #fff;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          margin-top: 20px;
+          font-size: small;
+          margin-left: 1350px;
+          margin-bottom: 10px;
+        }
+
+        
+        body.clicked {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Open Sans',sans-serif;
+            background-color: rgb(51, 51, 51);
+            color: #FFFFFF;
+        }
+
+        @media only screen and (max-width: 480px) {
+        .navbar-info img {
+            right: auto;
+            left: 50%;
+            /* transform: translateX(-50%); */
+        }
+
+        .navbar-info a {
+            bottom: 10px;
+            right: auto;
+            left: 50%;
+            /* transform: translateX(-50%); */
+        }
+
+        .contentKanan {
+            width: 100%;
+            height: auto;
+        }
+
+        .literasi {
+            margin-left: 10px;
+        }
+
+        .background {
+            position: relative;
+            right: 50px;
+        }
+        }
+
+
+    </style>
+</head>
+  <body style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <!-- Navigation Bar -->
+    <div class="navbar-info">
+        <img src="giphy.gif" alt="Animasi">
+        <a href="loginsiswa.html">Log Out</a>
+  </div>
+  <button class="background" onclick="changeBackground()">Dark Mode & Default</button>
+      
+  <div class="containers">
+    <div class="contentKiri">
+        <div class="navbar-menu" id="navbarMenu">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="literasi.html">Literasi</a></li>
+            <li><a href="latihan1.html">Latihan</a></li>
+            <li><a href="#">Ujian</a></li>
+            <li><a href="#">Live Coding</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+      <div class="contentKanan">
+        <div class="literasi">
+          <h1 align="center">Perulangan</h1>
+        <div class="materi">
+            <h1>Apa itu Perulangan?</h1>
+            <p><br>
+                &emsp14; Membuat suatu program tidak akan lepas dari perulangan atau looping. Misalkan saja kita ingin membuat minuman teh hangat untuk 10 tamu, tentunya kita akan mengulang proses membuat teh hangat sebanyak 10 kali. Inilah yang disebut dengan perulangan. <br>
+                Untuk lebih jelasnya perhatikan algoritma berikut :
+                <ol>
+                    <li>Mulai</li>
+                    <li>Nilai x = 15</li>
+                    <li>Selama x > 10 maka kerjakan langkah 5 sampai 6</li>
+                    <li>Tampilkan nilai = x,</li>
+                    <li>Nilai x = x - 1</li>
+                    <li>Selesai</li>
+                </ol>  
+                &emsp14; Algoritma diatas menunjukkan adanya perulangan, yaitu akan diulang selama nilai x masih kurang dari 10 dan akan berhenti jika nilai x sama dengan 10. Sekarang perhatikan algoritma perulangan yang lain :
+                <ol>
+                    <li>Mulai</li>
+                    <li>Nilai x = 15</li>
+                    <li>Tampilkan nilai = x,</li>
+                    <li>Nilai x = x - 1</li>
+                    <li>Selama x > 10 maka kembali ke langkah 3</li>
+                    <li>Selesai</li>
+                </ol>  
+                Algoritma ini juga menunjukkan adanya perulangan, yang mana akan mengulang langkah ketika nilai x masih kurang dari 10. Lalu apakah bedanya?? <br><br>
+                Mari kita ulas lebih mendetail, jika kita jalankan algoritma diatas, maka sistem akan memberikan hasil seperti berikut : <br><br>
+                <b>nilai = 15, nilai = 14, nilai = 13, nilai = 12, nilai = 11</b><br><br>
+                &emsp14; Jika diperhatikan hasilnya maka terlihat sama saja, namun secara proses berbeda, algoritma pertama akan melakukan cek terlebih dahulu kemudian memprosesnya sedangkan algoritma kedua akan memproses dulu baru melakukan cek. Apa yang di cek? Sistem akan melakukan cek pada kondisi yang diberikan, yang pada kasus ini adalah ketika x bernilai sama dengan 10. <br>
+                &emsp14; Untuk diagram alir (flowchart) dari algoritma diatas adalah: <br>
+            </p>
+            <center><img src="https://2.bp.blogspot.com/-O1f3zSh1T8M/V09rQTIMZ3I/AAAAAAAAAME/I8ss3SPpwoYXgrirXOGNLG_KrhT0hVRCgCLcB/s1600/Untitled.png" alt="perulangan_1" style="height: 450px;"><p>Gambar 1. Flowchart Perulangan For</p></center>
+            <p><br>
+                Gambar diatas menunjukkan bahwa pengecekan perulangan berada sebelum proses
+            </p><br>
+            <iframe src="https://trinket.io/embed/python/0582aea810" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+            <center><img src="https://1.bp.blogspot.com/-Vwtn2yNaJAU/V09rbhR9WnI/AAAAAAAAAMI/npz2uS9ynh436Dt_HpXK5iUA5xg8QYPaQCLcB/s1600/Untitled.png" alt="perulangan_2" style="height: 500px;"><p>Gambar 2. Flowchart Perulangan Do While</p></center><br><br>
+            <p>
+                Gambar diatas menunjukkan bahwa pengecekan perulangan berada setelah proses.
+            </p><br>
+            <h2>Pengaplikasian Perulangan dalam program (code)</h2>
+            <p>
+                <li>Perulangan dalam Python adalah salah satu fitur penting yang memungkinkan kita untuk menjalankan serangkaian kode berulang kali. Dengan menggunakan perulangan, kita dapat mengotomatisasi tugas yang berulang atau memproses rangkaian data secara efisien. Di Python, terdapat dua jenis perulangan utama: perulangan `for` dan perulangan `while`.</li> 
+            <p>
+                Berikkut Video Pembelajaran tentang Perulangan for dalam python <br>
+                <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Z4qfMhx4XzQ?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+            </p> 
+                <li>Perulangan `for`:
+                   Perulangan `for` digunakan ketika kita sudah mengetahui berapa kali perulangan akan dilakukan atau ketika kita ingin mengulangi serangkaian elemen yang ada dalam sebuah objek seperti daftar (list), string, atau tuple. Sintaks dasar perulangan `for` adalah sebagai berikut: </li> <br>
+                
+
+                    <center><img src="for.PNG" alt=""></center><br>
+            
+                
+                   Contoh penggunaan perulangan `for`: <br>
+                
+                   <center><img src="for1.PNG" alt="kode for 1"></center><br>
+                
+                  <li> Di sini, perulangan `for` akan mengulangi kode di dalam blok perulangan untuk setiap elemen dalam daftar `daftar_angka`.</li><br>
+                <p>
+                    Berikkut Video Pembelajaran tentang Perulangan while dalam python <br>
+                    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ZupffvoCChQ?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+                </p> 
+                
+                <li>Perulangan `while`:
+                   Perulangan `while` digunakan ketika kita tidak tahu berapa kali perulangan akan dilakukan dan ingin menjalankan serangkaian kode selama kondisi tertentu terpenuhi. Sintaks dasar perulangan `while` adalah sebagai berikut:</li><br> 
+                   
+                   <center><img src="while.PNG" alt=""></center><br>
+                
+                   Contoh penggunaan perulangan `while`: <br>
+
+                   <center><img src="while2.PNG" alt=""></center><br>
+                
+                   
+                   <li>Di sini, perulangan `while` akan terus mengulangi kode di dalam blok perulangan selama kondisi `angka <= 5` terpenuhi.</li><br> 
+                
+                <li>Selama menjalankan perulangan, kita dapat menggunakan beberapa pernyataan kontrol untuk mengontrol alur perulangan, seperti `break` untuk menghentikan perulangan, dan `continue` untuk melanjutkan ke iterasi berikutnya tanpa menjalankan kode yang tersisa dalam blok perulangan.</li> 
+                
+                <li>Perulangan adalah alat yang sangat berguna dalam pemrograman Python, dan dengan memahami penggunaan perulangan `for` dan `while`, kita dapat mengotomatisasi tugas, mengolah data, atau mengulang instruksi berdasarkan kondisi yang kita tentukan.</li>  
+            </p>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="copyright">
+      <div class="wrapper">
+          &copy; 2023. <b>Ashabul Kahfi</b> All Rights Reserved.
+      </div>
+  </div>
+    <script src="e-learning_.js"></script>
+  </body>
+
+

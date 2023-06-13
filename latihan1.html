@@ -3,84 +3,139 @@
 <head>
     <title>Latihan</title>
     <style>
-        footer {
-        background-color: #AEE2FF;
-        padding: 3px;
-        text-align: center;
-        font-size: 11px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        }
-        .card-body:hover{
-        background-color: yellowgreen;
-        }
+        
         body{
-            background-color: #ACBCFF;
+            background-color: #DDE6ED;
             padding: 0px;
             margin: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
+        body.clicked {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Open Sans',sans-serif;
+            background-color: rgb(51, 51, 51);
+            color: #FFFFFF;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .navbar-info {
+            background-color: #526D82;
+            color: rgb(241, 0, 0);
+            text-align: right;
+            padding: 20px;
+            height: 20px;
+        }
+
+        .navbar-info img{
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            position: relative;
+            bottom: 15px;
+            right: 1250px;
+        }
+
+        .navbar-info a {
+            position: relative;
+            bottom: 35px;
+            background: #3e95ff;
+            border-radius: 20px;
+            padding: 15px 20px 15px 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar-info a:hover {
+            background: #fc5185;
+            text-decoration: underline;
+        }
+
+        .navbar-menu {
+        position: fixed;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        transition: left 0.8s;
+        text-align: center;
+        }
+
+        .navbar-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 100px;
+        }
+
+        .navbar-menu li {
+        margin-bottom: 10px;
+        }
+
+        .navbar-menu a {
+        color: black;
+        text-decoration: none;
+        }
+
+        .navbar-menu a:hover {
+        color: rgb(87, 87, 255);
         }
        
-
-        .content{
-          display: flex;
+        .containers{
+            display: flex;
         }
-
-        .contentKiri{
-          width: 10%;
-          height: 1000px;
-          background-color: #4C3D3D;
-          margin-left: auto;
-          margin-top: 3.9%;
-          
-        }
-
 
         .contentKanan{
           width: 90%;
           height: 1000px;
-          background-color: #ACBCFF;
-          transition: 1s;
-          border-radius: 15%
         }
 
-        .contentKiri > div{
-          text-align: center;
-          flex-direction: column;
-          width: 80%;
-          height: 30px;
-          background-color: aliceblue;
-          margin: 15px;
-          margin-top: 20px;
-          
-        }
 
         .latihan{
-          width: 90%;
-          height: 30pxpx;
-          text-align: center;
-          background-color: rgb(198, 249, 70);
-          margin: 87px;
-          margin-left: 100px;
-          border-radius: 5%;
+          background-color: #415777;
+          margin: 75px;
+          margin-left: 330px;
+          border-radius: 15px;
           font-family: Arial, Helvetica, sans-serif;
-          
+          color: rgb(255, 248, 248);
+          text-align: center;
+          height: 50px;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+        }
+        .latihan> h1{
+            position: relative;
+            top: 8px;
         }
 
         .soal{
           width: 70%;
           height: auto;
           padding: 5px;
-          background-color: bisque;
+          background-color: #9DB2BF;
           text-align: center;
           margin: 20px;
-          margin-left: 270px;
+          position: relative;
+          left: 310px;
+          color: black;
           display: none;
+          font-weight: bold; 
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+          border-radius: 15px;
         }
 
         .kumpulanSoal{
           display: none;
+          margin-left: 250px;
         }
 
         .kumpulanSoal > div{
@@ -89,93 +144,195 @@
           height: 160px;
           margin: 40px;
           text-align: center;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+          border-radius: 15px;
         }
 
         .kumpulanSoal > div p{
           position: relative;
           top: 60px;
+          font-weight: 500;
         }
 
         .kumpulanSoal > div:hover{
-          background-color: aquamarine;
+          background-color: rgb(226, 204, 204);
         }
-        a{
-            text-decoration: none;
-            text-align: center;
-            color: red;
-            font-size: 20px;
-        }
+      
         .soale{
           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
           padding-top: 10px;
           font-size: large;
         
         }
-        .navbar-nav{
-          text-align: right;
-        }
-
-        .navigation{
-            position: fixed;
-            width: 100%;
-            height: 70px;
-            background-color: #AEE2FF;
-            justify-content: end;
-            display: flex;
-          
-        }
-        .navigation > a{
-            text-decoration: none;
-            color: black;
-            margin: 15px;
-        }
-
         .mulai{
           display: flex;
           justify-content: center;
           flex-direction: column;  
           position: relative;       
           top: 30px;
-          left: 425px;
+          
+          
+        }
+        .mulai > p{
+          text-align: center;
+          position: relative;
+          right: -140px;
+          margin-bottom: -10px;
         }
         .mulai > button {
           width: 100px;
+          margin-top: 50px;
+          position: relative;
+          left: 930px;
         }
         .jawabanA,.jawabanB,.jawabanC,.jawabanD{
           background: grey;
         }
 
+        .skor{
+          background-color: #9DB2BF;
+          position: relative;
+          width: 100px;
+          height: 30px;
+          left: 1200px;
+          text-align: center;
+          bottom: 49px;
+          padding-top: 1px;
+          padding-bottom: 20px;
+          border-radius: 10px;
+          
+        }
+
+
+        #copyright {
+            position: absolute;
+            left: 620px;
+            margin-top: -50px;
+
+        }
+        
+        .background{
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #2bd531;
+          color: #fff;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          margin-top: 20px;
+          font-size: small;
+          margin-left: 1350px;
+          margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-bottom: 10%;
+            }
+            
+        }
+
+        @media only screen and (max-width: 480px) {
+        .navbar-info img {
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      
+        .navbar-info a {
+          bottom: 10px;
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      
+        .latihan {
+          margin: 10px;
+          margin-left: 10px;
+        }
+      
+        .soal {
+          width: 90%;
+          left: 3%;
+          margin: 10px;
+        }
+      
+        .kumpulanSoal {
+          margin-left: 10px;
+        }
+      
+        .mulai > p {
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      
+        .mulai > button {
+          position: relative;
+          /* left: 10px; */
+          right: 50%;
+          /* transform: translateX(50%); */
+        }
+      
+        .skor {
+          position: relative;
+          /* left: 10000px; */
+          right: 100px;
+        }
+      
+        .background {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+
     </style>
 </head>
-  <body style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+  <body>
     <!-- Navigation Bar -->
-    <div class="navigation">
-      <a href="">About</a>
-      <a href="">Contact</a>
-      <a href="">Login</a>
+    <div class="navbar-info">
+      <img src="giphy.gif" alt="Animasi">
+      <a href="loginsiswa.html">Log Out</a>
   </div>
+  <button class="background" onclick="changeBackground()">Dark Mode & Default</button>
       
       
-    <div class="content">
-      <div class="contentKiri">
-        <div class="box1"><a href="dashboard.html"><p>Home</p></a></div>
-        <div class="box2"><a href="literasi.html"><p>Literasi</p></a></div>
-        <div class="box3"><a href="latihan.html"><p>Latihan</p></a></div>
-        <div class="box4"><a href="#"><p>Ujian</p></a></div>
-        <div class="box5"><a href="#"><p>Live Coding</p></a></div>
-      </div>
+  <div class="containers">
+    <div class="contentKiri">
+        <div class="navbar-menu" id="navbarMenu">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="literasi.html">Literasi</a></li>
+            <li><a href="latihan1.html">Latihan</a></li>
+            <li><a href="Ujian.html">Ujian</a></li>
+            <li><a href="livecoding.html">Live Coding</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
       <div class="contentKanan">
+        <div class="skor">
+          <p>Nilai</p>
+        </div>
         <div class="latihan">
           <h1>Latihan</h1>
-
-        </div>
+        </div>        
         <div class="mulai">
-          <p>aturan</p>
+          <p>KERJAKAN DENGAN SUNGGUH-SUNGGUH</p>
+          <p>PILIHLAH SALAH SATU JAWABAN YANG TEPAT !</p>
           <button onclick="tampilkanSoal()">Mulai</button>
         </div>
         <div class="soal">
           <p class="soale">Soal</p>
         </div>
+
         <div class="kumpulanSoal">
           <div class="JawabanA" onclick="funcJawabanA()">
             <p></p>
@@ -192,6 +349,12 @@
         </div>
       </div>
     </div>
+
+    <div id="copyright">
+      <div class="wrapper">
+          &copy; 2023. <b>Ashabul Kahfi</b> All Rights Reserved.
+      </div>
+  </div>
     <script src="e-learning_.js"></script>
   </body>
 

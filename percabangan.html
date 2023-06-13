@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>percabangan</title>
+    <style>
+        
+        body{
+            background-color: #DDE6ED;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .navbar-info {
+            background-color: #526D82;
+            color: rgb(241, 0, 0);
+            text-align: right;
+            padding: 20px;
+            height: 20px;
+        }
+
+        .navbar-info img{
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            position: relative;
+            bottom: 15px;
+            right: 1260px;
+        }
+
+        .navbar-info a {
+            position: relative;
+            bottom: 35px;
+            background: #3e95ff;
+            border-radius: 20px;
+            padding: 15px 20px 15px 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar-info a:hover {
+            background: #fc5185;
+            text-decoration: underline;
+        }
+
+        .navbar-menu {
+        position: fixed;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        transition: left 0.8s;
+        text-align: center;
+        }
+
+        .navbar-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 100px;
+        }
+
+        .navbar-menu li {
+        margin-bottom: 10px;
+        }
+
+        .navbar-menu a {
+        color: black;
+        text-decoration: none;
+        }
+
+        .navbar-menu a:hover {
+        color: rgb(87, 87, 255);
+        }
+       
+        .containers{
+            display: flex;
+        }
+
+        .contentKanan{
+          width: 90%;
+          height: 1000px;
+          transition: 1s;
+          border-radius: 15%
+        }
+
+
+        .literasi{
+          width: auto;
+          height: 50px;
+          background-color: #415777;
+          margin-left: 230px;
+          border-radius: 3%;
+          font-family: Arial, Helvetica, sans-serif;
+          color: rgb(255, 248, 248);
+        }  
+           
+        .materi{
+            width: 99%;
+            height: auto;
+            background-color: #415777;
+            margin-top: 40px;
+            padding-left: 10px;
+            border-radius: 5px;
+        }
+        
+
+        #copyright {
+            text-align: center;
+            width: 100%;
+            padding: 50px 10px 40px 0px;
+            text-align: center;
+            position: relative;
+            top: 1500px;
+            left: 40px;
+        }
+
+        .background{
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #2bd531;
+          color: #fff;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          margin-top: 20px;
+          font-size: small;
+          margin-left: 1350px;
+          margin-bottom: 10px;
+        }
+
+        
+        body.clicked {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Open Sans',sans-serif;
+            background-color: rgb(51, 51, 51);
+            color: #FFFFFF;
+        }
+
+    </style>
+</head>
+  <body style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <!-- Navigation Bar -->
+    <div class="navbar-info">
+        <img src="giphy.gif" alt="Animasi">
+        <a href="loginsiswa.html">Log Out</a>
+  </div>
+  <button class="background" onclick="changeBackground()">Dark Mode & Default</button>
+      
+  <div class="containers">
+    <div class="contentKiri">
+        <div class="navbar-menu" id="navbarMenu">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="literasi.html">Literasi</a></li>
+            <li><a href="latihan1.html">Latihan</a></li>
+            <li><a href="#">Ujian</a></li>
+            <li><a href="#">Live Coding</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+      <div class="contentKanan">
+        <div class="literasi">
+          <h1 align="center">Percabangan</h1>
+        <div class="materi">
+            <h1>Apa itu Percabangan?</h1>
+            <p>
+                Percabangan dalam dunia pemrograman adalah proses penentuan keputusan atau dalam bahasa Inggris ini biasa disebut sebagai conditional statement.
+                Konsepnya sederhana: kita menginstruksikan komputer untuk melakukan suatu aksi tertentu (X), hanya jika suatu kondisi Y terpenuhi. Atau, kita 
+                memerintahkan komputer untuk melakukan aksi tertentu (A) jika suatu kondisi tidak terpenuhi.
+            </p>
+            <center><img src="https://jagongoding.com/storage/2021/01/python-percabangan/percabangan-python.svg" alt="" style="height: 500px;"></center>
+            <p>
+                Premisnya adalah <strong>"Jika-Maka"</strong>. Contoh:
+                <ol>
+                    <li>Jika nilai siswa lebih dari atau sama dengan 90, maka dia dapat predikat A.</li>
+                    <li>Jika nilai siswa lebih dari atau sama dengan 80, maka dia dapat predikat B.</li>
+                    <li>Jika nilai siswa lebih dari atau sama dengan 40, maka dia dapat predikat C.</li>
+                    <li>Dan seterusnya.</li>
+                </ol>
+                Ilustrasi:
+            </p>
+            <center><img src="https://jagongoding.com/storage/2021/01/python-percabangan/percabangan-python-elif.svg" alt="" style="height: 500px;"></center>
+            <p>
+                &emsp;Dalam Python, percabangan digunakan untuk memilih tindakan yang akan diambil berdasarkan kondisi tertentu. Pada dasarnya, ada dua jenis percabangan yang umum digunakan dalam Python: if dan if-else.
+            
+            </p><br>
+            <h2>Pengaplikasian percabangan dalam program (code)</h2>
+            <p>
+                Percabangan if:<br>
+                Percabangan if digunakan untuk mengevaluasi suatu kondisi, dan jika kondisi tersebut bernilai True, maka blok kode yang terkait akan dieksekusi.
+            </p><br>
+            <center><img src="If_1.PNG" alt="kode if 1" style="height: 125px;"></center><br>
+                Pada contoh di atas, jika nilai variabel umur lebih besar atau sama dengan 18, maka pesan "Anda sudah dewasa" akan dicetak.
+
+                <p>
+                    Dan contoh if yg lain
+                    <center><img src="if_2.PNG" alt="kode if 2"></center><br>
+                    
+                    Penjelasan:
+                    Code di atas menggunakan percabangan if untuk memeriksa apakah nilai variabel `nilai` lebih besar atau sama dengan 70. Jika kondisi tersebut terpenuhi (nilai `nilai` lebih besar atau sama dengan 70), maka blok kode di dalam if akan dieksekusi.
+    
+                    Pada contoh di atas, `nilai` memiliki nilai 75. Ketika dilakukan perbandingan `nilai >= 70`, kondisinya terpenuhi karena 75 lebih besar dari 70. Oleh karena itu, blok kode di dalam if akan dieksekusi. Dalam hal ini, blok kode hanya mencetak string "Anda lulus."
+    
+                    Dalam percabangan if, blok kode yang dijalankan tergantung pada apakah kondisi yang diberikan bernilai `True` atau `False`. Jika kondisi bernilai `True`, maka blok kode di dalam if akan dieksekusi. Namun, jika kondisi bernilai `False`, maka blok kode di dalam if akan diabaikan dan tidak dieksekusi.
+    
+                    Dalam contoh di atas, karena kondisi `nilai >= 70` bernilai `True`, maka blok kode di dalam if dieksekusi dan mencetak "Anda lulus." Jika kondisi tersebut bernilai `False`, maka blok kode di dalam if tidak akan dieksekusi.
+                </p>
+            <p><br>
+                Percabangan if-else:<br>
+                Percabangan if-else digunakan ketika kita ingin menjalankan blok kode yang berbeda tergantung pada apakah kondisi bernilai True atau False.
+            </p><br>
+            
+            <center><img src="if_else.PNG" alt="" style="height: 150px;"></center><br>
+                Pada contoh di atas, jika nilai variabel umur lebih besar atau sama dengan 18, maka pesan "Anda sudah dewasa" akan dicetak. Jika kondisi tidak terpenuhi, pesan "Anda masih anak-anak" akan dicetak. <br>
+                <br><center><img src="if_else2.PNG" alt="" style="height: 250px;"></center><br>
+                &emsp; Penjelasan:
+                <ol>
+                    <li>Pertama, kita meminta pengguna untuk memasukkan sebuah angka menggunakan fungsi input. Angka tersebut akan disimpan dalam variabel angka.</li>
+                    <li>Kemudian, kita menggunakan percabangan if-else untuk memeriksa apakah angka tersebut genap atau ganjil.
+                    </li>
+                    <li>Pada baris 6, kita menggunakan operator modulo (%) untuk memeriksa sisa hasil bagi angka dengan 2. Jika sisa hasil bagi adalah 0, maka angka tersebut genap. Jika tidak, maka angka tersebut ganjil.</li>
+                    <li>Jika angka tersebut genap, program akan mencetak pesan bahwa angka tersebut adalah bilangan genap.</li>
+                    <li>Jika angka tersebut ganjil, program akan mencetak pesan bahwa angka tersebut adalah bilangan ganjil.</li>
+                </ol><br>
+                &emsp; Contoh di atas hanya menggunakan percabangan if-else sederhana untuk memeriksa genap atau ganjilnya sebuah angka. Percabangan if-else juga dapat digunakan dengan kondisi yang lebih kompleks dan dapat dikombinasikan dengan percabangan lainnya seperti if-elif-else.
+            <p><br>
+                &emsp;Selain itu, kita juga dapat menggunakan percabangan if-elif-else untuk mengevaluasi beberapa kondisi yang berbeda.
+            
+            <p></p>
+            </p><br>
+            <center><img src="if_elif_else.PNG" alt="" style="height: 200px;"></center><br>
+                Pada contoh di atas, jika nilai variabel umur kurang dari 18, maka pesan "Anda masih anak-anak" akan dicetak. Jika kondisi pertama tidak terpenuhi dan nilai umur kurang dari 25, maka pesan "Anda remaja" akan dicetak. Jika kedua kondisi sebelumnya tidak terpenuhi, pesan "Anda sudah dewasa" akan dicetak.
+            <p><br>
+                Itulah penjelasan singkat mengenai percabangan dalam Python dan contoh-contoh kode yang terkait. Percabangan ini memungkinkan kita untuk membuat program yang dapat mengambil keputusan berdasarkan kondisi yang ada.
+            </p><br>
+            <p>
+                Dan contoh if elif else yg berbeda
+                <center><img src="if_elif_else2.PNG" alt="kode if elif else"></center><br>
+
+
+                Penjelasan:
+                Dalam contoh di atas, kita menggunakan percabangan if-elif-else untuk memeriksa rentang nilai `nilai` dan memberikan keterangan berdasarkan rentang nilai tersebut. <br><br>
+
+                <li>Jika `nilai` lebih besar atau sama dengan 90, maka blok kode di dalam if akan dieksekusi dan akan mencetak "Nilai Anda A."</li><br> 
+                <li>Jika kondisi di atas tidak terpenuhi, maka akan dilanjutkan ke percabangan elif selanjutnya.</li><br> 
+                <li> Jika `nilai` lebih besar atau sama dengan 80, maka blok kode di dalam elif akan dieksekusi dan akan mencetak "Nilai Anda B."</li><br>
+                <li>Jika kondisi di atas tidak terpenuhi, maka akan dilanjutkan ke percabangan elif berikutnya.</li><br>
+                <li>Jika `nilai` lebih besar atau sama dengan 70, maka blok kode di dalam elif akan dieksekusi dan akan mencetak "Nilai Anda C."</li> <br>
+                <li>Jika semua kondisi di atas tidak terpenuhi, maka blok kode di dalam else akan dieksekusi dan akan mencetak "Nilai Anda D."</li> <br>
+
+                Dalam contoh di atas, `nilai` memiliki nilai 75. Karena kondisi `nilai >= 70` terpenuhi, maka blok kode di dalam elif pertama akan dieksekusi dan mencetak "Nilai Anda C."
+
+                Percabangan if-elif-else digunakan ketika terdapat beberapa kondisi yang ingin diperiksa secara berurutan. Ketika salah satu kondisi terpenuhi, blok kode di dalam kondisi tersebut akan dieksekusi, dan blok kode di dalam kondisi lainnya akan diabaikan. Jika tidak ada kondisi yang terpenuhi, maka blok kode di dalam else (jika ada) akan dieksekusi.
+            </p>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="copyright">
+      <div class="wrapper">
+          &copy; 2023. <b>Ashabul Kahfi</b> All Rights Reserved.
+      </div>
+  </div>
+    <script src="e-learning_.js"></script>
+  </body>
+
+
