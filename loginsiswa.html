@@ -1,0 +1,457 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	  <link rel="stylesheet" type="text/css" href="css.css">
+
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+    /*label{
+      display: inline-block; 
+      width: 80px;
+    }
+    input,select{
+      width: 120px;
+    }*/
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #DDE6ED !important;
+      margin-left: 50px;
+    }
+
+    img{
+      padding: 10px;
+      height: 110px;
+      position: relative;
+      left: 145px;
+      bottom: 250px;
+      border-radius: 150px;
+    }
+
+    @media (max-width: 480px) {
+      .background_home{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #DDE6ED !important;
+      margin-left: -100px;
+    }
+
+    img{
+      padding: 10px;
+      height: 110px;
+      position: relative;
+      left: 145px;
+      bottom: 250px;
+      border-radius: 150px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .background_home{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #DDE6ED !important;
+      margin-left: -110px;
+    }
+
+    img{
+      padding: 10px;
+      height: 110px;
+      position: relative;
+      left: 145px;
+      bottom: 250px;
+      border-radius: 150px;
+    }
+  }
+
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  </head>
+
+  <body class="background_home">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <img src="giphy.gif" alt="Animasi">
+    <div class="mb-6" >
+      <h3 clas="mb-3"style="color: black;margin-left: 20px;">Masuk Siswa</h3>
+      
+      <input type="text" placeholder="Email" id="userInp" class="form-control mb-3">
+      <input type="password" placeholder="Password" id="passInp" class="form-control mb-3">
+      <div class="custom-control custom-switch mb-3">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1" style="color: black;">Buat saya tetap masuk</label>
+      </div>
+      <a href="#" id="login"><button type="text" id="sub_btn" class="btn w-100 btn-success mb-3">Masuk</button></a>
+      <br><br>
+      <a href="loginguru.html" class="badge badge-primary py-1 w-100">Masuk sebagai pengajar</a>
+      <br>
+      <a href="register.html" class="badge badge-secondary py-1 w-100">Ingin membuat akun baru?</a>
+
+    </div>
+
+            
+
+  <!--------------------FIREBASE CONFIG--------------- -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+   // TODO: Add SDKs for Firebase products that you want to use
+  import { getDatabase, ref, set, push, get, child, onValue, update, remove } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig ={
+        apiKey: "AIzaSyCLlzxfLBW8bkOlzQqD_lubfjSflXIbK9M",
+        authDomain: "tugaspraktikum11.firebaseapp.com",
+        projectId: "tugaspraktikum11",
+        storageBucket: "tugaspraktikum11.appspot.com",
+        messagingSenderId: "763005655602",
+        appId: "1:763005655602:web:1a782c3a5c0c9dbd557a2b"
+  };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app); 
+
+// ---------------------- The References----------------
+
+    const username = document.getElementById('userInp');
+    // const log_in = document.getElementById('clock1');
+    console.log(username);
+    const pass = document.getElementById('passInp');
+    const submit = document.getElementById('sub_btn');
+
+// ---------------------Authentication-------------------
+
+    function AuntheticateUser(){
+      const dbref = ref(db);
+      // get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+      //     if (snapshot.exists()) {
+      //       console.log(snapshot.val());
+      //     } else {
+      //       console.log("No data available");
+      //     }
+      //   }).catch((error) => {
+      //     console.error(error);
+      //   });
+
+      get(child(dbref, "UserList/"+ username.value.replace(/\./g, ','))).then((snapshot)=>{
+        if(snapshot.exists()){
+
+          let dbpass = snapshot.val().password;
+          let dbuser = snapshot.val().username;
+          let dbnama = snapshot.val().fullname;
+          let dbprog = snapshot.val().barprogres;
+          let dbclass = snapshot.val().class;
+          let dbevaluasi = snapshot.val().evaluasi;
+          let dbkuis1 = snapshot.val().kuis1;
+          let dbkuis2 = snapshot.val().kuis2;
+          let dbkuis3 = snapshot.val().kuis3;
+          let dbkuis4 = snapshot.val().kuis4;
+          let dbkuis5 = snapshot.val().kuis5;
+          let dbkuis6 = snapshot.val().kuis6;
+          let dbkuis7 = snapshot.val().kuis7;
+          let dbkuis8 = snapshot.val().kuis8;
+          let dbkuis9 = snapshot.val().kuis9;
+          let dbkuis10 = snapshot.val().kuis10;
+          let dbkuis11 = snapshot.val().kuis11;
+          let dbnim = snapshot.val().nim;
+
+
+          console.log(dbpass);
+          console.log(dbuser);
+          if (dbpass == pass.value) {
+            Signin();
+            sessionStorage.setItem('username', dbuser);
+            sessionStorage.setItem('password', dbpass);
+            sessionStorage.setItem('fullname', dbnama);
+            sessionStorage.setItem('barprogres', dbprog);
+            sessionStorage.setItem('class', dbclass);
+            sessionStorage.setItem('evaluasi', dbevaluasi);
+            sessionStorage.setItem('kuis1', dbkuis1);
+            sessionStorage.setItem('kuis2', dbkuis2);
+            sessionStorage.setItem('kuis3', dbkuis3);
+            sessionStorage.setItem('kuis4', dbkuis4);
+            sessionStorage.setItem('kuis5', dbkuis5);
+            sessionStorage.setItem('kuis6', dbkuis6);
+            sessionStorage.setItem('kuis7', dbkuis7);
+            sessionStorage.setItem('kuis8', dbkuis8);
+            sessionStorage.setItem('kuis9', dbkuis9);
+            sessionStorage.setItem('kuis10', dbkuis10);
+            sessionStorage.setItem('kuis11', dbkuis11);
+            sessionStorage.setItem('nim', dbnim);
+
+            localStorage.setItem('username', dbuser);
+            localStorage.setItem('password', dbpass);
+            localStorage.setItem('fullname', dbnama);
+            localStorage.setItem('barprogres', dbprog);
+            localStorage.setItem('class', dbclass);
+            localStorage.setItem('evaluasi', dbevaluasi);
+            localStorage.setItem('kuis1', dbkuis1);
+            localStorage.setItem('kuis2', dbkuis2);
+            localStorage.setItem('kuis3', dbkuis3);
+            localStorage.setItem('kuis4', dbkuis4);
+            localStorage.setItem('kuis5', dbkuis5);
+            localStorage.setItem('kuis6', dbkuis6);
+            localStorage.setItem('kuis7', dbkuis7);
+            localStorage.setItem('kuis8', dbkuis8);
+            localStorage.setItem('kuis9', dbkuis9);
+            localStorage.setItem('kuis10', dbkuis10);
+            localStorage.setItem('kuis11', dbkuis11);
+            localStorage.setItem('nim', dbnim);
+
+            
+            login(snapshot.val());
+          }
+
+          else{
+            swal({
+            title: "Perhatian!",
+            text: "Nama Pengguna atau Password yang anda masukan salah.",
+            icon: "warning",
+            button: "Lanjutkan",
+          });
+             
+          } 
+        }
+
+        else{
+          swal({
+            title: "Perhatian!",
+            text: "Nama Pengguna atau Password yang anda masukan salah.",
+            icon: "warning",
+            button: "Lanjutkan",
+          });
+          
+          
+        }
+      });
+    }
+
+// -------------------Descript --------------------------
+
+    // function decPass(dbpass){
+    //   var pass12 = CryptoJS.AES.encrypt(dbpass, pass.value);
+    //   return pass12.toString(CryptoJS.enc.Utf8);
+    // }
+
+// ----------------------Login----------------------------
+
+    function login(user){
+      let keepLoggedIn = document.getElementById('customSwitch1').checked;
+      
+
+      if(!keepLoggedIn){
+        sessionStorage.setItem('user', user);
+        window.location="index.html";
+
+      }
+
+      else{
+        localStorage.setItem('keepLoggedIn', 'yes' );
+        localStorage.setItem('username', username.value.replace(/\./g, ','));
+        localStorage.setItem('password', pass.value);
+
+        
+        // localStorage.setItem('user', JSON.stringify(user));
+        window.location= "index.html";
+        
+      }
+    }
+
+// --------------------ASSIGN THE EVENTS---------------------
+
+    submit.addEventListener('click', AuntheticateUser);
+
+/////////////////////////////////////////////////////////////
+    
+
+      function Signin() {
+        // const currentUser = sessionStorage.getItem('username');
+        update(ref(db, 'UserList/' + username.value.replace(/\./g, ',')), {
+          login: +new Date(),
+        })
+          .then(() => {
+
+          })
+          .catch((error) => {
+            alert('gagal');
+          });
+      }
+
+
+  </script>
+
+
+
+<!-- <nav class="navbar navbar-expand-lg bg-primary" style="--bs-bg-opacity: .1;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../GAMBAR/pd.png" alt="width:100%; height:100%"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="informasi.html"><img src="../GAMBAR/2.png" alt="width:100%; height:100%"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  aria-current="page" href="informasi.html"><img src="../GAMBAR/3.png" alt="width:100%; height:100%"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+
+
+<!-- ----------------------- -->
+<!-- CRUD KODE BERHASIL !!!! -->
+<!-- ----------------------- -->
+
+
+<!--   <label>Name</label><input type="text" id="Namebox"><br><br>
+  <label>RollNo</label><input type="text" id="Rollbox"><br><br>
+  <label>Section</label><input type="text" id="Secbox"><br><br>
+  <label>Gender</label>
+  <select id="Genbox">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+  </select>
+
+  <hr>
+  <button id="Insbtn">INSERT</button>
+  <button id="Selbtn">SELECT</button>
+  <button id="Updbtn">UPDATE</button>
+  <button id="Delbtn">DELETE</button>
+  
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDzYhNSwGVuDbciKmFw_7xw15IG3GVzKj4",
+    authDomain: "pythondasar.firebaseapp.com",
+    projectId: "pythondasar",
+    storageBucket: "pythondasar.appspot.com",
+    messagingSenderId: "184259851140",
+    appId: "1:184259851140:web:e601492ca1fb26e03de3d1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  import{getDatabase, ref, get, set, child, update, remove}
+  from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+
+  const db = getDatabase();
+
+  // Referensi
+  var namebox = document.getElementById("Namebox");
+  var rollbox = document.getElementById("Rollbox");
+  var secbox = document.getElementById("Secbox");
+  var genbox = document.getElementById("Genbox");
+
+  var insBtn = document.getElementById("Insbtn");
+  var selBtn = document.getElementById("Selbtn");
+  var updBtn = document.getElementById("Updbtn");
+  var delBtn = document.getElementById("Delbtn");
+
+  // Insert Function
+  function InsertData(){
+    set(ref(db, "TheStudents/"+ rollbox.value),{
+      NameOfStd: namebox.value,
+      RollNo: rollbox.value,
+      Section: secbox.value,
+      Gender: genbox.value
+    })
+    .then(()=>{
+      alert("data stored successfully");
+
+    })
+    .catch((error)=>{
+      alert("unsucsessful, error"+error);
+    });
+  }
+
+  // select  data function
+  function SelectData(){
+    const dbref = ref(db);
+
+    get(child(dbref, "TheStudents/"+ rollbox.value)).then((snapshot)=>{
+      if(snapshot.exists()){
+        namebox.value = snapshot.val().NameOfStd;
+        secbox.value = snapshot.val().Section;
+        genbox.value = snapshot.val().Gender;
+      }
+      else{
+        alert("No data found");
+      }
+    })
+    .catch((error)=>{
+      alert("unsucsessful, error"+error);
+    });
+  }
+
+  // update data function
+  function UpdateData() {
+    update(ref(db, "TheStudents/"+ rollbox.value),{
+      NameOfStd: namebox.value,
+      Section: secbox.value,
+      Gender: genbox.value
+    })
+    .then(()=>{
+      alert("data update successfully");
+
+    })
+    .catch((error)=>{
+      alert("unsucsessful, error"+error);
+    });
+  }
+
+
+  // delete data function
+  function DeleteData() {
+    remove(ref(db, "TheStudents/"+ rollbox.value))
+    .then(()=>{
+      alert("data delete successfully");
+
+    })
+    .catch((error)=>{
+      alert("unsucsessful, error"+error);
+    });
+  }
+     
+  // Assign Events To Btns
+  insBtn.addEventListener('click',InsertData);
+  selBtn.addEventListener('click',SelectData);
+  updBtn.addEventListener('click',UpdateData);
+  delBtn.addEventListener('click',DeleteData);  
+
+  </script>
+ -->
+
+  </body> 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>
+
+
+
