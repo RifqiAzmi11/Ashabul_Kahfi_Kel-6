@@ -28,7 +28,7 @@
             border-radius: 15px;
             position: relative;
             bottom: 15px;
-            right: 1260px;
+            right: 1420px;
         }
 
         .navbar-info a {
@@ -93,32 +93,44 @@
 
         .literasi{
           width: auto;
-          height: 50px;
+          height: 45px;
           background-color: #415777;
           margin-left: 230px;
-          border-radius: 3%;
+          margin-top: 20px;
           font-family: Arial, Helvetica, sans-serif;
           color: rgb(255, 248, 248);
+          border-radius: 20px;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
         }  
+
+    
            
         .materi{
-            width: 99%;
+            
             height: auto;
             background-color: #415777;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 248, 248);
             margin-top: 40px;
             padding-left: 10px;
             border-radius: 5px;
-
+            border-radius: 20px;
+            padding: 20px 20px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+            margin-left: 235px;
+            
         }
         
 
         #copyright {
             text-align: center;
             width: 100%;
-            padding: 50px 10px -100px 0px;
+            padding: 50px 10px 40px 0px;
             text-align: center;
             position: relative;
-            top: 1050px;
+            top: 3000px;
             left: 40px;
         }
 
@@ -145,34 +157,90 @@
             color: #FFFFFF;
         }
 
+        @media only screen and (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .navbar-info img {
+                right: 10px;
+            }
+
+            .navbar-info a {
+                bottom: 25px;
+                padding: 10px 15px;
+            }
+
+            .navbar-menu {
+                width: 150px;
+                padding: 10px;
+            }
+
+            .contentKanan {
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .literasi {
+                margin-left: 0;
+            }
+
+            .materi {
+                margin-left: 0;
+            }
+
+            .background {
+                left: 10px;
+            }
+
+            #copyright {
+                top: 10px;
+                left: 10px;
+            }
+            }
+
         @media only screen and (max-width: 480px) {
-        .navbar-info img {
-            right: auto;
-            left: 50%;
-            /* transform: translateX(-50%); */
-        }
+            body {
+                padding: 10px;
+            }
 
-        .navbar-info a {
-            bottom: 10px;
-            right: auto;
-            left: 50%;
-            /* transform: translateX(-50%); */
-        }
+            .navbar-info img {
+                right: 10px;
+            }
 
-        .contentKanan {
-            width: 100%;
-            height: auto;
-        }
+            .navbar-info a {
+                bottom: 20px;
+                padding: 10px 15px;
+            }
 
-        .literasi {
-            margin-left: 10px;
-        }
+            .navbar-menu {
+                width: 150px;
+                padding: 10px;
+            }
 
-        .background {
-            position: relative;
-            right: 50px;
-        }
-        }
+            .contentKanan {
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .literasi {
+                margin-left: 0;
+            }
+
+            .materi {
+                margin-left: 0;
+            }
+
+            .background {
+                left: 10px;
+            }
+
+            #copyright {
+                top: 10px;
+                left: 10px;
+            }
+            }
+
 
 
     </style>
@@ -191,9 +259,9 @@
             <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="literasi.html">Literasi</a></li>
-            <li><a href="latihan1.html">Latihan</a></li>
-            <li><a href="#">Ujian</a></li>
-            <li><a href="#">Live Coding</a></li>
+            <li><a href="latihan1.html">Quiz</a></li>
+            <li><a href="Ujian.html">Ujian</a></li>
+            <li><a href="livecoding.html">Live Coding</a></li>
             </ul>
         </div>
     </div>
@@ -201,6 +269,7 @@
       <div class="contentKanan">
         <div class="literasi">
           <h1 align="center">Perulangan</h1>
+        </div>
         <div class="materi">
             <h1>Apa itu Perulangan?</h1>
             <p><br>
@@ -233,16 +302,15 @@
             <p><br>
                 Gambar diatas menunjukkan bahwa pengecekan perulangan berada sebelum proses
             </p><br>
-            <iframe src="https://trinket.io/embed/python/0582aea810" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
             <center><img src="https://1.bp.blogspot.com/-Vwtn2yNaJAU/V09rbhR9WnI/AAAAAAAAAMI/npz2uS9ynh436Dt_HpXK5iUA5xg8QYPaQCLcB/s1600/Untitled.png" alt="perulangan_2" style="height: 500px;"><p>Gambar 2. Flowchart Perulangan Do While</p></center><br><br>
             <p>
                 Gambar diatas menunjukkan bahwa pengecekan perulangan berada setelah proses.
             </p><br>
-            <h2>Pengaplikasian Perulangan dalam program (code)</h2>
+            <h2>Pengaplikasian Perulangan dalam Program (Code)</h2>
             <p>
                 <li>Perulangan dalam Python adalah salah satu fitur penting yang memungkinkan kita untuk menjalankan serangkaian kode berulang kali. Dengan menggunakan perulangan, kita dapat mengotomatisasi tugas yang berulang atau memproses rangkaian data secara efisien. Di Python, terdapat dua jenis perulangan utama: perulangan `for` dan perulangan `while`.</li> 
             <p>
-                Berikkut Video Pembelajaran tentang Perulangan for dalam python <br>
+                Berikut Video Pembelajaran tentang Perulangan for dalam python <br>
                 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Z4qfMhx4XzQ?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
             </p> 
                 <li>Perulangan `for`:
@@ -258,7 +326,7 @@
                 
                   <li> Di sini, perulangan `for` akan mengulangi kode di dalam blok perulangan untuk setiap elemen dalam daftar `daftar_angka`.</li><br>
                 <p>
-                    Berikkut Video Pembelajaran tentang Perulangan while dalam python <br>
+                    Berikut Video Pembelajaran tentang Perulangan while dalam python <br>
                     <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ZupffvoCChQ?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
                 </p> 
                 
@@ -288,7 +356,7 @@
           &copy; 2023. <b>Ashabul Kahfi</b> All Rights Reserved.
       </div>
   </div>
-    <script src="e-learning_.js"></script>
+    <script src="e-learning_1.js"></script>
   </body>
 
 

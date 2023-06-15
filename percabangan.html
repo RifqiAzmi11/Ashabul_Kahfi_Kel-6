@@ -142,6 +142,91 @@
             background-color: rgb(51, 51, 51);
             color: #FFFFFF;
         }
+        
+        @media only screen and (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .navbar-info img {
+                right: 10px;
+            }
+
+            .navbar-info a {
+                bottom: 25px;
+                padding: 10px 15px;
+            }
+
+            .navbar-menu {
+                width: 150px;
+                padding: 10px;
+            }
+
+            .contentKanan {
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .literasi {
+                margin-left: 0;
+            }
+
+            .materi {
+                margin-left: 0;
+            }
+
+            .background {
+                left: 10px;
+            }
+
+            #copyright {
+                top: 10px;
+                left: 10px;
+            }
+            }
+
+        @media only screen and (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .navbar-info img {
+                right: 10px;
+            }
+
+            .navbar-info a {
+                bottom: 20px;
+                padding: 10px 15px;
+            }
+
+            .navbar-menu {
+                width: 150px;
+                padding: 10px;
+            }
+
+            .contentKanan {
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .literasi {
+                margin-left: 0;
+            }
+
+            .materi {
+                margin-left: 0;
+            }
+
+            .background {
+                left: 10px;
+            }
+
+            #copyright {
+                top: 10px;
+                left: 10px;
+            }
+            }
+
 
     </style>
 </head>
@@ -192,6 +277,9 @@
                 &emsp;Dalam Python, percabangan digunakan untuk memilih tindakan yang akan diambil berdasarkan kondisi tertentu. Pada dasarnya, ada dua jenis percabangan yang umum digunakan dalam Python: if dan if-else.
             
             </p><br>
+            <p>Berikut adalahh video penjelasan tentang percabangan Dalam python <br>
+                <center><iframe width="560" height="315" src="https://www.youtube.com/embed/rF8rh40z_X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+            </p><br>
             <h2>Pengaplikasian percabangan dalam program (code)</h2>
             <p>
                 Percabangan if:<br>
@@ -204,19 +292,20 @@
                     Dan contoh if yg lain
                     <center><img src="if_2.PNG" alt="kode if 2"></center><br>
                     
-                    Penjelasan:
-                    Code di atas menggunakan percabangan if untuk memeriksa apakah nilai variabel `nilai` lebih besar atau sama dengan 70. Jika kondisi tersebut terpenuhi (nilai `nilai` lebih besar atau sama dengan 70), maka blok kode di dalam if akan dieksekusi.
+                       <li>Penjelasan:
+                    Code di atas menggunakan percabangan if untuk memeriksa apakah nilai variabel `nilai` lebih besar atau sama dengan 70. Jika kondisi tersebut terpenuhi (nilai `nilai` lebih besar atau sama dengan 70), maka blok kode di dalam if akan dieksekusi.</li> 
     
-                    Pada contoh di atas, `nilai` memiliki nilai 75. Ketika dilakukan perbandingan `nilai >= 70`, kondisinya terpenuhi karena 75 lebih besar dari 70. Oleh karena itu, blok kode di dalam if akan dieksekusi. Dalam hal ini, blok kode hanya mencetak string "Anda lulus."
+                    <li>Pada contoh di atas, `nilai` memiliki nilai 75. Ketika dilakukan perbandingan `nilai >= 70`, kondisinya terpenuhi karena 75 lebih besar dari 70. Oleh karena itu, blok kode di dalam if akan dieksekusi. Dalam hal ini, blok kode hanya mencetak string "Anda lulus.</li> 
     
-                    Dalam percabangan if, blok kode yang dijalankan tergantung pada apakah kondisi yang diberikan bernilai `True` atau `False`. Jika kondisi bernilai `True`, maka blok kode di dalam if akan dieksekusi. Namun, jika kondisi bernilai `False`, maka blok kode di dalam if akan diabaikan dan tidak dieksekusi.
+                    <li> Dalam percabangan if, blok kode yang dijalankan tergantung pada apakah kondisi yang diberikan bernilai `True` atau `False`. Jika kondisi bernilai `True`, maka blok kode di dalam if akan dieksekusi. Namun, jika kondisi bernilai `False`, maka blok kode di dalam if akan diabaikan dan tidak dieksekusi.</li>
     
-                    Dalam contoh di atas, karena kondisi `nilai >= 70` bernilai `True`, maka blok kode di dalam if dieksekusi dan mencetak "Anda lulus." Jika kondisi tersebut bernilai `False`, maka blok kode di dalam if tidak akan dieksekusi.
+                    <li>Dalam contoh di atas, karena kondisi `nilai >= 70` bernilai `True`, maka blok kode di dalam if dieksekusi dan mencetak "Anda lulus." Jika kondisi tersebut bernilai `False`, maka blok kode di dalam if tidak akan dieksekusi.</li> 
                 </p>
             <p><br>
                 Percabangan if-else:<br>
                 Percabangan if-else digunakan ketika kita ingin menjalankan blok kode yang berbeda tergantung pada apakah kondisi bernilai True atau False.
             </p><br>
+            
             
             <center><img src="if_else.PNG" alt="" style="height: 150px;"></center><br>
                 Pada contoh di atas, jika nilai variabel umur lebih besar atau sama dengan 18, maka pesan "Anda sudah dewasa" akan dicetak. Jika kondisi tidak terpenuhi, pesan "Anda masih anak-anak" akan dicetak. <br>
@@ -256,9 +345,9 @@
                 <li>Jika `nilai` lebih besar atau sama dengan 70, maka blok kode di dalam elif akan dieksekusi dan akan mencetak "Nilai Anda C."</li> <br>
                 <li>Jika semua kondisi di atas tidak terpenuhi, maka blok kode di dalam else akan dieksekusi dan akan mencetak "Nilai Anda D."</li> <br>
 
-                Dalam contoh di atas, `nilai` memiliki nilai 75. Karena kondisi `nilai >= 70` terpenuhi, maka blok kode di dalam elif pertama akan dieksekusi dan mencetak "Nilai Anda C."
+                <li>Dalam contoh di atas, `nilai` memiliki nilai 75. Karena kondisi `nilai >= 70` terpenuhi, maka blok kode di dalam elif pertama akan dieksekusi dan mencetak "Nilai Anda C."</li> <br>
 
-                Percabangan if-elif-else digunakan ketika terdapat beberapa kondisi yang ingin diperiksa secara berurutan. Ketika salah satu kondisi terpenuhi, blok kode di dalam kondisi tersebut akan dieksekusi, dan blok kode di dalam kondisi lainnya akan diabaikan. Jika tidak ada kondisi yang terpenuhi, maka blok kode di dalam else (jika ada) akan dieksekusi.
+                <li>Percabangan if-elif-else digunakan ketika terdapat beberapa kondisi yang ingin diperiksa secara berurutan. Ketika salah satu kondisi terpenuhi, blok kode di dalam kondisi tersebut akan dieksekusi, dan blok kode di dalam kondisi lainnya akan diabaikan. Jika tidak ada kondisi yang terpenuhi, maka blok kode di dalam else (jika ada) akan dieksekusi.</li> 
             </p>
         </div>
     </div>

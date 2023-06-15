@@ -8,7 +8,6 @@
             background-color: #DDE6ED;
             padding: 0px;
             margin: 0px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
             
         }
 
@@ -38,25 +37,23 @@
             border-radius: 15px;
             position: relative;
             bottom: 15px;
-            right: 1250px;
+            right: 1450px;
         }
 
-        .navbar-info a {
+        .signout{
+            background: #3f72af;
+            border-radius: 20px;
+            border: none;
+            padding: 15px 20px 15px 20px;
             position: relative;
             bottom: 35px;
-            background: #3e95ff;
-            border-radius: 20px;
-            padding: 15px 20px 15px 20px;
             color: #FFFFFF;
             cursor: pointer;
             font-weight: bold;
-            text-decoration: none;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.25), 
+                            0 5px 3px rgba(0,0,0,0.22);
         }
 
-        .navbar-info a:hover {
-            background: #fc5185;
-            text-decoration: underline;
-        }
 
         .navbar-menu {
         position: fixed;
@@ -120,8 +117,8 @@
           width: 70%;
           height: auto;
           padding: 5px;
+          padding-left: 20px;
           background-color: #9DB2BF;
-          text-align: center;
           margin: 20px;
           position: relative;
           left: 310px;
@@ -147,6 +144,9 @@
           box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
                     0 10px 10px rgba(0,0,0,0.22);
           border-radius: 15px;
+          
+          
+          
         }
 
         .kumpulanSoal > div p{
@@ -184,7 +184,7 @@
           width: 100px;
           margin-top: 50px;
           position: relative;
-          left: 930px;
+          left: 760px;
         }
         .jawabanA,.jawabanB,.jawabanC,.jawabanD{
           background: grey;
@@ -207,7 +207,7 @@
 
         #copyright {
             position: absolute;
-            left: 620px;
+            left: 730px;
             margin-top: -50px;
 
         }
@@ -222,84 +222,65 @@
           cursor: pointer;
           margin-top: 20px;
           font-size: small;
-          margin-left: 1350px;
+          position: relative;
+          left: 1350px;
           margin-bottom: 10px;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+
+        }
+        #selesai{
+          padding: 10px;
+          display: none;
+          background-color: lime;
+          position: absolute;
+          top: 500px;
+          left: 53%;
+          transform: translateX(-50%);
+          border-radius: 10px;
+          width: 20%;
+          
+        }
+        #selesai a{
+          text-decoration: none;
+
+        }
+        .navbar-info .signout:hover {
+            background: #fc5185;
+            text-decoration: underline;
         }
 
         @media only screen and (max-width: 768px) {
-            .flex-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding-left: 20%;
-            padding-right: 20%;
-            padding-bottom: 10%;
-            }
+          .mulai > button {
+              width: 10px;
+              margin-top: 50px;
+              position: relative;
+              left: 840px;
+          }
+
+          body{
+            width: 10%;
+            position: relative;
+            left: 100px;
+          }
+        
+
+
+
+           
             
         }
-
         @media only screen and (max-width: 480px) {
-        .navbar-info img {
-          right: auto;
-          left: 50%;
-          transform: translateX(-50%);
+          
         }
-      
-        .navbar-info a {
-          bottom: 10px;
-          right: auto;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      
-        .latihan {
-          margin: 10px;
-          margin-left: 10px;
-        }
-      
-        .soal {
-          width: 90%;
-          left: 3%;
-          margin: 10px;
-        }
-      
-        .kumpulanSoal {
-          margin-left: 10px;
-        }
-      
-        .mulai > p {
-          right: auto;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      
-        .mulai > button {
-          position: relative;
-          /* left: 10px; */
-          right: 50%;
-          /* transform: translateX(50%); */
-        }
-      
-        .skor {
-          position: relative;
-          /* left: 10000px; */
-          right: 100px;
-        }
-      
-        .background {
-          margin-left: 10px;
-          margin-right: 10px;
-        }
-      }
 
     </style>
 </head>
-  <body>
+  <body style="font-family: Verdana, Geneva, Tahoma, sans-serif">
     <!-- Navigation Bar -->
     <div class="navbar-info">
       <img src="giphy.gif" alt="Animasi">
-      <a href="loginsiswa.html">Log Out</a>
+      <button class="signout" onclick="Signout()">Log Out</button>
   </div>
   <button class="background" onclick="changeBackground()">Dark Mode & Default</button>
       
@@ -310,7 +291,7 @@
             <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="literasi.html">Literasi</a></li>
-            <li><a href="latihan1.html">Latihan</a></li>
+            <li><a href="latihan1.html">Quiz</a></li>
             <li><a href="Ujian.html">Ujian</a></li>
             <li><a href="livecoding.html">Live Coding</a></li>
             </ul>
@@ -323,6 +304,7 @@
         </div>
         <div class="latihan">
           <h1>Latihan</h1>
+
         </div>        
         <div class="mulai">
           <p>KERJAKAN DENGAN SUNGGUH-SUNGGUH</p>
@@ -346,6 +328,9 @@
           <div class="JawabanD" onclick="funcJawabanD()">
             <p></p>
           </div>
+        <button id="selesai"><a href="latihan1.html">Selesai Latihan</a></button>
+          
+        
         </div>
       </div>
     </div>
@@ -355,7 +340,121 @@
           &copy; 2023. <b>Ashabul Kahfi</b> All Rights Reserved.
       </div>
   </div>
-    <script src="e-learning_.js"></script>
-  </body>
+    <script src="e-learning_1.js"></script>
+    <script type="module">
+      // --------------------References---------------------------
+          let element = document.getElementById("barProgres");
+          let nama = document.getElementById('nama');
+          let nim = document.getElementById('nim');
+          let kelas = document.getElementById('kelas'); 
+          var currentProgres = null; 
+          var currentUser = null;
+          var currentFullName = null;
+          var currentNim = null;
+          var currentClass = null;
+          var currentKuis1 = null;
+          var submit = document.getElementById("selesai")
+      
+      //---------------------Function-----------------------------
+       
+      
+      
+       //------------------FIREBASE CONFIG------------------------
+      
+          // Import the functions you need from the SDKs you need
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+   // TODO: Add SDKs for Firebase products that you want to use
+  import { getDatabase, ref, set, push, get, child, onValue, update, remove } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig ={
+        apiKey: "AIzaSyCLlzxfLBW8bkOlzQqD_lubfjSflXIbK9M",
+        authDomain: "tugaspraktikum11.firebaseapp.com",
+        projectId: "tugaspraktikum11",
+        storageBucket: "tugaspraktikum11.appspot.com",
+        messagingSenderId: "763005655602",
+        appId: "1:763005655602:web:1a782c3a5c0c9dbd557a2b"
+  };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+      
+      
+      // ----------------------Function-----------------
+      
+          function getUsername(){
+      
+            
+              currentUser = localStorage.getItem('username');
+              currentFullName = localStorage.getItem('fullname');
+              currentNim = localStorage.getItem('nim');
+              currentClass = localStorage.getItem('class');
+              currentKuis1 = localStorage.getItem('latihan');
+      
+          
+              // currentUser = sessionStorage.getItem('username');
+              // currentFullName = sessionStorage.getItem('fullname');
+              // currentNim = sessionStorage.getItem('nim');
+              // currentClass = sessionStorage.getItem('class');
+              // currentKuis1 = sessionStorage.getItem('latihan');
+              
+            
+          }
+      
+      
+        //-------------- update progres function in database---------------
+          function UpdateData() {
+            getUsername();    
+            console.log(currentUser);
+            console.log(currentKuis1);
+              update(ref(db, "UserList/"+ currentUser),{
+                kuis1 : currentKuis1
+              })
+              .then(()=>{
+                swal({
+                  title: "Perhatian!",
+                  text: "Nilai berhasih di update.",
+                  icon: "success",
+                  button: "Lanjutkan",
+                });
+      
+              })
+              .catch((error)=>{
+                swal({
+                  title: "Maaf!",
+                  text: "unsucsessful, error"+error,
+                  icon: "error",
+                  button: "Lanjutkan",
+                });
+              });
+            
+            }
+      
+  
+      // --------------------ASSIGN THE EVENTS---------------------
+      
+          submit.addEventListener('click', UpdateData);
+      
+        </script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+  function Signout(){
+    sessionStorage.removeItem('usernamep');
+    sessionStorage.removeItem('fullname');
+    sessionStorage.removeItem('password');
 
 
+    localStorage.removeItem('usernamep');
+    localStorage.removeItem('fullname');
+    localStorage.removeItem('password');
+
+
+    localStorage.removeItem('keepLoggedIn');
+    window.location="loginsiswa.html"
+  }
+  </script>   
+</body>
+
+</html>
