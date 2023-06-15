@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian</title>
+    <style>
+
+        body{
+            background-color: #DDE6ED;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+        .navbar-info {
+            background-color: #526D82;
+            text-align: right;
+            padding: 20px;
+            height: 20px;
+        }
+
+        .navbar-info img{
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            position: relative;
+            bottom: 15px;
+            right: 1370px;
+        }
+
+
+
+        .navbar-menu {
+        position: fixed;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        transition: left 0.8s;
+        text-align: center;
+        }
+
+        .navbar-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 100px;
+        }
+
+        .navbar-menu li {
+        margin-bottom: 10px;
+        }
+
+        .navbar-menu a {
+        color: black;
+        text-decoration: none;
+        }
+
+        .navbar-menu a:hover {
+        color: rgb(87, 87, 255);
+        }
+
+        .judul{
+            margin-left: 500px;
+            padding: 20px;
+            background-color: #73b778;;
+            width: 40%;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+        }
+        button{
+            color: white;
+            background-color: green;
+            width: 150px; 
+            height: 50px;
+            display: block;
+            align-content: center;
+            font-size: medium;
+            border-radius: 10px;
+            position: relative;
+            left: 100px;
+        }
+        
+        .bankSoal{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin-left: 400px;
+        }
+        .soal {
+            padding: 20px 20px 20px 20px;
+            width: 750px;
+            height: auto;
+            margin: 20px;
+            background-color:gray;
+            font-size: large;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+            border-radius: 15px;
+            font-size: medium;
+        }
+        table {
+
+            text-align: center;
+            padding: 5px;
+            margin: 20px;
+            position: relative;
+            left: 80px;
+        }
+
+        tr , td {
+            border: 1px solid black;
+            margin: 40px;
+            padding: 40px;            
+        }
+        
+        .displayHasil {
+            font-size: large;
+            margin: 10px;
+            position: relative;
+            left: 100px;
+        }
+
+        .containers{
+            display: flex;
+        }
+
+        #copyright {
+            position: absolute;
+            left: 670px;
+            margin-top: 100px;
+           padding-bottom: 20px;
+        }
+        .background{
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #2bd531;
+          color: #fff;
+          border: none;
+          border-radius: 15px;
+          cursor: pointer;
+          margin-top: 20px;
+          font-size: small;
+          margin-left: 1250px;
+          margin-bottom: 10px;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+
+        }
+
+        body.clicked {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Open Sans',sans-serif;
+            background-color: rgb(51, 51, 51);
+            color: #FFFFFF;
+        }
+
+        .navbar-info button{
+            
+           width: 100px;
+           height: 40px;
+           background: #3f72af;
+           border-radius: 20px;
+           position: relative;
+           left: 1370px;
+           bottom: 89px;
+           border: none;
+           padding: 15px 20px 15px 20px;
+           color: #FFFFFF;
+           cursor: pointer;
+           font-weight: bold;
+           box-shadow: 0 5px 5px rgba(0,0,0,0.25), 
+                           0 5px 3px rgba(0,0,0,0.22);
+       }
+
+       .navbar-info button p{
+        font-size: medium;
+        width: 200px;
+        position: relative;
+        right: 69px;
+        bottom: 20px;
+       
+       }
+       
+       .navbar-info button:hover {
+           background: #fc5185;
+           text-decoration: underline;
+       }
+
+       .swal-button-container{
+            position: relative;
+            right: 240px;
+            
+        }
+
+
+       @media only screen and (max-width: 768px) {
+        button{
+            color: white;
+            background-color: green;
+            width: 150px; 
+            height: 50px;
+            display: block;
+            align-content: center;
+            font-size: medium;
+            border-radius: 10px;
+            position: relative;
+            left: 450px;
+        }
+
+        #copyright {
+            width: 100%;
+            position: absolute;
+            left: 670px;
+            margin-top: 100px;
+             padding-bottom: 20px;
+        }
+
+        .navbar-info button{
+            
+            width: 100px;
+            height: 40px;
+            background: #3f72af;
+            border-radius: 20px;
+            position: relative;
+            left: 570px;
+            bottom: 89px;
+            border: none;
+            padding: 15px 20px 15px 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.25), 
+                            0 5px 3px rgba(0,0,0,0.22);
+        }
+        .background{
+          padding: 10px 20px;
+          font-size: small;
+          background-color: #2bd531;
+          color: #fff;
+          border: none;
+          border-radius: 15px;
+          cursor: pointer;
+          margin-top: 20px;
+          font-size: small;
+          margin-left: 150px;
+          margin-bottom: 10px;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+
+        }
+        .soal {
+            padding: 20px 20px 20px 20px;
+            width: 350px;
+            height: auto;
+            margin: 20px;
+            background-color:gray;
+            font-size: large;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+            border-radius: 15px;
+            font-size: medium;
+            position: relative;
+            right: 90px;
+        }
+
+        .judul{
+            margin-left: 440px;
+            padding: 20px;
+            background-color: #73b778;;
+            width: 20%;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+        }
+        .navbar-info {
+            background-color: #526D82;
+            text-align: right;
+            padding: 20px;
+            height: 20px;
+        }
+        .bankSoal{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin-left: 400px;
+        }
+        
+        
+
+       }
+
+        
+    </style>
+</head>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div class="navbar-info">
+        <img src="giphy.gif" alt="Animasi">
+        <li><button onclick="Signout()"><p>Logout</p></button></li>
+    </div>
+    <div class="containers">
+        <div class="contentKiri">
+            <div class="navbar-menu" id="navbarMenu">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="literasi.html">Literasi</a></li>
+                <li><a href="latihan1.html">Quiz</a></li>
+                <li><a href="Ujian.html">Ujian</a></li>
+                <li><a href="livecoding.html">Live Coding</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button class="background" onclick="changeBackground()">Dark Mode & Default</button>
+    <h1 class="judul">Ujian</h1>
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Apa output dari potongan kode berikut?
+                <br>x = 10
+                <br>y = 5
+                <br><br>if x > y:
+                <br>&emsp;print("x lebih besar dari y")
+                <br>else:
+                <br>&emsp;print("y lebih besar dari atau sama dengan x")
+            </h4>
+            <label for="pilihan1A">
+                <input type="radio" name="Nomor1" id="pilihan1A" class="jawaban1">A. x lebih besar dari y<br></label>
+            <label for="pilihan1B">
+                <input type="radio" name="Nomor1" id="pilihan1B" >B. y lebih besar dari atau sama dengan x<br></label>
+            <label for="pilihan1C">
+                <input type="radio" name="Nomor1" id="pilihan1C">C. Tidak ada output yang ditampilkan <br></label>
+            <label for="pilihan1D">
+                <input type="radio" name="Nomor1" id="pilihan1D">D. Terjadi error saat menjalankan kode<br></label>
+        </div>
+    </div>
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Apa output yang akan ditampilkan??
+                <br><br>num = 15
+                <br>if num > 10:
+                <br>&emsp;print("Angka tersebut lebih besar dari 10")
+                <br><br>&emsp;if num % 2 == 0:
+                <br>&emsp;&emsp;print("Angka tersebut juga merupakan angka genap")
+                <br><br>&emsp;else :
+                <br>&emsp;&emsp;print("Angka tersebut merupakan angka ganjil")
+                <br><br>else:
+                <br>&emsp;print("Angka tersebut tidak memenuhi kondisi di atas")
+                <br>
+            </h4>
+            <label for="pilihan2A">
+                <input type="radio" name="Nomor2" id="pilihan2A" class="jawaban2">A. Angka tersebut lebih besar dari 10 dan "Angka tersebut juga merupakan angka genap<br></label>
+            <label for="pilihan2B"> 
+                <input type="radio" name="Nomor2" id="pilihan2B">B. Angka tersebut lebih besar dari 10 dan "Angka tersebut merupakan angka ganjil<br></label>
+            <label for="pilihan2C">
+                <input type="radio" name="Nomor2" id="pilihan2C">C. Angka tersebut tidak memenuhi kondisi di atas<br></label>    
+            <label for="pilihan2D">
+                <input type="radio" name="Nomor2" id="pilihan2D" >D. Tidak ada output yang ditampilkan<br></label>
+        </div>
+    </div>
+    
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Apa output yang akan ditampilkan?<br>
+                <br>for i in range(1, 6):
+                <br>&emsp;print(i)
+                <br>
+            </h4>
+            <label for="pilihan3A">
+                <input type="radio" name="Nomor3" id="pilihan3A" class="jawaban3">A. 1, 2, 3, 4, 5<br></label>
+            <label for="pilihan3B">
+                <input type="radio" name="Nomor3" id="pilihan3B">B. 0, 1, 2, 3, 4<br></label>
+            <label for="pilihan3C">
+                <input type="radio" name="Nomor3" id="pilihan3C">C. 1, 2, 3, 4<br></label>        
+            <label for="pilihan3D">
+                <input type="radio" name="Nomor3" id="pilihan3D">D. 0, 1, 2, 3, 4, 5<br></label>          
+        </div>
+    </div>
+    
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Apa output yang akan ditampilkan?<br>
+                <br>for i in range(1, 10, 2):
+                <br>&emsp;print(i)
+                <br>
+            </h4>
+            <label for="pilihan4A">
+                <input type="radio" name="Nomor4" id="pilihan4A">A. 2, 4, 6, 8 <br></label>
+            <label for="pilihan4B">
+                <input type="radio" name="Nomor4" id="pilihan4B">B. 1, 2, 3, 4, 5, 6, 7, 8, 9<br></label>
+            <label for="pilihan4C">
+                <input type="radio" name="Nomor4" id="pilihan4C" class="jawaban4">C. 1, 3, 5, 7, 9<br></label>
+            <label for="pilihan4D">
+                <input type="radio" name="Nomor4" id="pilihan4D">D. 2, 3, 4, 5, 6, 7, 8, 9<br></label>
+        </div>
+    </div>
+    
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Apa output yang akan ditampilkan??
+                <br><br>age = 22
+                <br>if age < 18:
+                <br>&emsp;print("Anda masih di bawah umur")
+                <br><br>elif age >= 18 and age < 30:
+                <br>&emsp;print("Anda dewasa muda")
+                <br><br>elif age >= 30 and age < 60:
+                <br>&emsp;print("Anda dewasa")
+                <br><br>else:
+                <br>&emsp;print("Anda sudah tua")
+                <br>
+            </h4>
+            <label for="pilihan5A">
+                <input type="radio" name="Nomor5" id="pilihan5A">A. Anda masih di bawah umur<br></label>
+            <label for="pilihan5B">
+                <input type="radio" name="Nomor5" id="pilihan5B" class="jawaban5">B. Anda dewasa muda<br></label>
+            <label for="pilihan5C">
+                <input type="radio" name="Nomor5" id="pilihan5C">C. Anda dewasa<br></label>
+            <label for="pilihan5D">
+                <input type="radio" name="Nomor5" id="pilihan5D">D. Anda sudah tua<br></label>
+        </div>
+    </div>
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Berikut adalah potongan kode Python. Apa output yang akan ditampilkan?
+                <br><br>x = 15
+                <br>if x > 10:
+                <br>&emsp;print("x lebih besar dari 10")
+                <br><br>&emsp;if x > 20:
+                <br>&emsp;&emsp;print("x juga lebih besar dari 20")
+                <br><br>&emsp;else :
+                <br>&emsp;&emsp;print("x tidak lebih besar dari 20")
+                <br><br>else:
+                <br>&emsp;print("x tidak memenuhi kondisi di atas")
+                <br>
+            </h4>
+            <label for="pilihan6A">
+                <input type="radio" name="Nomor6" id="pilihan6A" >A. x lebih besar dari 10" dan "x juga lebih besar dari 20<br></label>
+            <label for="pilihan6B"> 
+                <input type="radio" name="Nomor6" id="pilihan6B" class="jawaban6">B. x lebih besar dari 10" dan "x tidak lebih besar dari 20<br></label>
+            <label for="pilihan6C">
+                <input type="radio" name="Nomor6" id="pilihan6C">C. x tidak memenuhi kondisi di atas<br></label>    
+            <label for="pilihan6D">
+                <input type="radio" name="Nomor6" id="pilihan6D" >D. Tidak ada output yang ditampilkan<br></label>
+        </div>
+    </div>
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Apa output yang akan ditampilkan??
+                <br><br>x = 5
+                <br>y = 5
+                <br>&emsp;if x > y:
+                <br><br>&emsp;print("x lebih besar dari y")
+                <br>&emsp;&emsp;elif x < y:
+                <br><br>&emsp;print("x lebih kecil dari y")
+                <br>&emsp;&emsp;else:
+                <br><br>print("x sama dengan y")
+                <br>
+            </h4>
+            <label for="pilihan7A">
+                <input type="radio" name="Nomor7" id="pilihan7A" >A. x lebih besar dari y<br></label>
+            <label for="pilihan7B"> 
+                <input type="radio" name="Nomor7" id="pilihan7B" >B. x lebih kecil dari y<br></label>
+            <label for="pilihan7C">
+                <input type="radio" name="Nomor7" id="pilihan7C" class="jawaban7">C. x sama dengan y<br></label>    
+            <label for="pilihan7D">
+                <input type="radio" name="Nomor7" id="pilihan7D" >D. Tidak ada output yang ditampilkan<br></label>
+        </div>
+    </div>
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Apa output yang akan ditampilkan??
+                <br><br>num = 25
+                <br>if num % 2 == 0:
+                <br>&emsp;print("Angka tersebut adalah angka genap")
+                <br><br>&emsp;elif num % 3 == 0:
+                <br>&emsp;&emsp;print("Angka tersebut adalah kelipatan 3")
+                <br><br>&emsp;else :
+                <br>&emsp;&emsp;print("Angka tersebut merupakan angka ganjil")
+                <br><br>else:
+                <br>&emsp;print("Angka tersebut bukan angka genap maupun kelipatan 3")
+                <br>
+            </h4>
+            <label for="pilihan8A">
+                <input type="radio" name="Nomor8" id="pilihan8A" >A. Angka tersebut adalah angka genap<br></label>
+            <label for="pilihan8B"> 
+                <input type="radio" name="Nomor8" id="pilihan8B" >B. Angka tersebut adalah kelipatan 3<br></label>
+            <label for="pilihan8C">
+                <input type="radio" name="Nomor8" id="pilihan8C" class="jawaban8">C. Angka tersebut bukan angka genap maupun kelipatan 3<br></label>    
+            <label for="pilihan8D">
+                <input type="radio" name="Nomor8" id="pilihan8D" >D. Tidak ada output yang ditampilkan<br></label>
+        </div>
+    </div>
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Apa output dari potongan kode berikut?
+                <br><br>num = 0
+                <br>if num > 0:
+                <br>&emsp;print("Angka tersebut positif")
+                <br><br>&emsp;elif num < 0:
+                <br>&emsp;&emsp;print("Angka tersebut negatif")
+                <br><br>&emsp;else :
+                <br>&emsp;&emsp;print("Angka tersebut adalah nol")
+                <br>
+            </h4>
+            <label for="pilihan9A">
+                <input type="radio" name="Nomor9" id="pilihan9A" >A. Angka tersebut positif<br></label>
+            <label for="pilihan9B"> 
+                <input type="radio" name="Nomor9" id="pilihan9B">B. Angka tersebut negatif<br></label>
+            <label for="pilihan9C">
+                <input type="radio" name="Nomor9" id="pilihan9C" class="jawaban9">C. Angka tersebut adalah nol<br></label>    
+            <label for="pilihan9D">
+                <input type="radio" name="Nomor9" id="pilihan9D" >D. Tidak ada output yang ditampilkan<br></label>
+        </div>
+    </div>
+    <div class="bankSoal">
+        <div class="soal">
+            <h4>Berikut adalah potongan kode Python menggunakan perulangan while. Berapa kali output "Hello" akan ditampilkan?
+                <br><br>count = 0
+                <br>while count < 5:
+                <br>&emsp;print("Hello")
+                <br><br>&emsp;count += 1
+                <br>
+            </h4>
+            <label for="pilihan10A">
+                <input type="radio" name="Nomor10" id="pilihan10A" >A. 3 kali<br></label>
+            <label for="pilihan10B"> 
+                <input type="radio" name="Nomor10" id="pilihan10B" >B. 4 kali<br></label>
+            <label for="pilihan10C">
+                <input type="radio" name="Nomor10" id="pilihan10C" class="jawaban10">C. 5 kali<br></label>    
+            <label for="pilihan10D">
+                <input type="radio" name="Nomor10" id="pilihan10D" >D. 6 kali<br></label>
+        </div>
+    </div>
+
+    
+    <center>
+        <br><button type="submit" id="end" onclick="cekJawaban()">SUBMIT</button>
+
+        <table>
+            <tr id="nomor"></tr>  
+            <tr id="keterangan"></tr>
+        </table> 
+
+        <div id="hasil" class="displayHasil"></div>
+    </center>
+
+    
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2023. <b>Ashabul Kahfi</b> All Rights Reserved.
+        </div>
+    </div>
+    
+    <script>
+        let jawaban = [".jawaban1", ".jawaban2",".jawaban3",".jawaban4",".jawaban5",".jawaban6",".jawaban7",".jawaban8",".jawaban9",".jawaban10"]
+        let nilai = 0
+        let benar = 0
+        let salah = 0
+
+        function cekJawaban() {
+            const benarSalah = document.getElementById("keterangan");
+            const nomor = document.getElementById("nomor");
+            for(let i = 0; i < jawaban.length; i++){
+                if (document.querySelector(jawaban[i]).checked == true) {
+                    nilai += 10
+                    benar += 1
+                    
+                    
+                    
+                    const nomorBetul = document.createElement("td")
+                    nomorBetul.innerText = i + 1 ;
+                    nomor.appendChild(nomorBetul);
+
+                    const betul = document.createElement("td")
+                    betul.innerText = "Benar";
+                    betul.style.background = "green"
+                    benarSalah.appendChild(betul);
+                }else{
+                    nilai += 0
+                    salah += 1
+
+                    const nomorSalah = document.createElement("td")
+                    nomorSalah.innerText = i + 1 ;
+                    nomor.appendChild(nomorSalah);
+
+                    const wrong = document.createElement("td")
+                    wrong.innerText = "Salah";
+                    wrong.style.background = "red";
+                    benarSalah.appendChild(wrong);
+                }
+
+                localStorage.setItem("evaluasi", nilai);
+            }
+            if(nilai >= 80){
+                swal({
+                    title: "Perhatian!",
+                    text: "Nilai Anda Mencukupi.",
+                    icon: "success",
+                    button: "Lanjutkan",
+                  });
+        
+                document.querySelector("#hasil").innerHTML = `Benar = ${benar} <br>Salah = ${salah} <br>Skor = ${nilai}` ;
+            }else{
+                swal({
+                    title: "Perhatian!",
+                    text: "Nilai Anda Masih Kurang.",
+                    icon: "warning",
+                    button: "Lanjutkan",
+                    
+                  });
+
+                  
+        
+                document.querySelector("#hasil").innerHTML = `Benar = ${benar}<br> Salah = ${salah} <br> Skor = ${nilai}`;
+
+                
+            }
+        }
+        
+        
+        console.log("nilai",nilai)
+        const navbarMenu = document.getElementById('navbarMenu');
+        const content = document.getElementsByClassName('content')[0];
+
+        navbarMenu.addEventListener('mouseover', function() {
+        navbarMenu.style.left = '0';
+        ;
+        });
+
+        navbarMenu.addEventListener('mouseout', function() {
+        navbarMenu.style.left = '-200px';
+        content.style.marginLeft = '0';
+        });
+        
+        function changeBackground() {
+            document.body.classList.toggle("clicked");
+            document.p.classList.toggle("clicked");
+
+        }
+        function Signout(){
+            sessionStorage.removeItem('usernamep');
+            sessionStorage.removeItem('fullname');
+            sessionStorage.removeItem('password');
+
+
+            localStorage.removeItem('usernamep');
+            localStorage.removeItem('fullname');
+            localStorage.removeItem('password');
+
+
+            localStorage.removeItem('keepLoggedIn');
+            window.location="loginsiswa.html"
+        }
+        
+    </script>
+    <script type="module">
+        // --------------------References---------------------------
+            let element = document.getElementById("barProgres");
+            let nama = document.getElementById('nama');
+            let nim = document.getElementById('nim');
+            let kelas = document.getElementById('kelas'); 
+            var currentProgres = null; 
+            var currentUser = null;
+            var currentFullName = null;
+            var currentNim = null;
+            var currentClass = null;
+            var currentKuis1 = null;
+            var currentUjian = null;
+            var submit = document.getElementById("end")
+        
+        //---------------------Function-----------------------------
+         
+        
+        
+         //------------------FIREBASE CONFIG------------------------
+        
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            import { getDatabase, ref, set, push, get, child, onValue, update, remove } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+  
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig ={
+          apiKey: "AIzaSyCLlzxfLBW8bkOlzQqD_lubfjSflXIbK9M",
+          authDomain: "tugaspraktikum11.firebaseapp.com",
+          projectId: "tugaspraktikum11",
+          storageBucket: "tugaspraktikum11.appspot.com",
+          messagingSenderId: "763005655602",
+          appId: "1:763005655602:web:1a782c3a5c0c9dbd557a2b"
+    };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase();
+        
+        
+        // ----------------------Function-----------------
+        
+            function getUsername(){
+        
+              
+                currentUser = localStorage.getItem('username');
+                currentFullName = localStorage.getItem('fullname');
+                currentNim = localStorage.getItem('nim');
+                currentClass = localStorage.getItem('class');
+                currentKuis1 = localStorage.getItem('latihan');
+                currentUjian = localStorage.getItem('evaluasi')
+        
+            
+                // currentUser = sessionStorage.getItem('username');
+                // currentFullName = sessionStorage.getItem('fullname');
+                // currentNim = sessionStorage.getItem('nim');
+                // currentClass = sessionStorage.getItem('class');
+                // currentKuis1 = sessionStorage.getItem('latihan');
+                
+              
+            }
+        
+        
+          //-------------- update progres function in database---------------
+            function UpdateData() {
+              getUsername();    
+              console.log(currentUser);
+              console.log(currentUjian);
+                update(ref(db, "UserList/"+ currentUser),{
+                  evaluasi : currentUjian
+                })
+                .catch((error)=>{
+                  swal({
+                    title: "Maaf!",
+                    text: "unsucsessful, error"+error,
+                    icon: "error",
+                    button: "Lanjutkan",
+                  });
+                });
+              
+              }
+        
+    
+        // --------------------ASSIGN THE EVENTS---------------------
+        
+        submit.addEventListener('click', () => {
+            UpdateData();
+        });
+       
+    
+    function Signout(){
+        sessionStorage.removeItem('usernamep');
+        sessionStorage.removeItem('fullname');
+        sessionStorage.removeItem('password');
+    
+    
+        localStorage.removeItem('usernamep');
+        localStorage.removeItem('fullname');
+        localStorage.removeItem('password');
+    
+    
+        localStorage.removeItem('keepLoggedIn');
+        window.location="loginsiswa.html"
+    }
+    
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+        
+    
+</body>
+</html>
