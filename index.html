@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Akhir Ashabul Kahfi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href='' >Ashabul Kahfi</a></div> 
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button onclick="Signout()">Log Out</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <button class="background" onclick="changeBackground()"><P>Dark Mode & Default</P></button>
+    
+    
+    <div class="wrapper">
+        <!-- untuk home -->
+        <section id="home">
+            <img src="https://img.freepik.com/free-vector/code-typing-concept-illustration_114360-3581.jpg?size=626&ext=jpg&ga=GA1.1.1517625207.1678241755&semt=sph"/>
+            <div class="kolom">
+                <p class="deskripsi">Belajar Python di Rumah aja</p>
+                <h2>Tetap Semangat dalam Belajar Python</h2>
+                <h1 id="nama" style="font-size: 70px;"></h1>
+            </div>
+        </section>
+
+        <!-- untuk konten -->
+        <section>
+            <div class="kolom">
+                <p class="deskripsi">You Will Need This</p>
+                <h2>Literasi</h2>
+                <p>Masih bingung terkait materi perulangan dan percabangan pada Python ? </p>
+                <p>Gunakan fitur “Literasi” agar kamu lebih tau lagi terkait materi tersebut</p>
+                <p><a href="literasi.html" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
+            </div>
+            <div class="bok1"><img src="https://img.freepik.com/premium-photo/python-programming-code-abstract-technology-background_272306-146.jpg?size=626&ext=jpg&ga=GA1.1.1517625207.1678241755&semt=ais"></div>
+        </section>
+
+        <section>
+            <div class="kolom">
+                <h2>Quiz</h2>
+                <p>Ingin mencoba menjawab soal-soal latihan terkait materi perulangan dan percabangan ?</p>
+                <p>Gunakan fitur “Latihan” agar kamu  bisa menjawab soal - soal berkaitan materi tersebut.</p>
+                <p><a href="latihan1.html" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
+            </div>
+            <div class="bok2"><img src="Latihan.jpg"></div>
+        </section>
+
+        <section>
+            <div class="kolom">
+                <h2>Ujian</h2>
+                <p>Ingin mengetahui seberapa jauh kemampuan kamu ? </p>
+                <p>Gunakan fitur “Ujian“ untuk mengetahui sampai mana kamu memahami materi yang sudah kamu pelajari.</p>
+                <p><a href="Ujian.html" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
+            </div>
+            <div class="bok3"><img src="https://img.freepik.com/free-vector/tiny-cute-children-learning-coding_74855-14175.jpg?size=626&ext=jpg&ga=GA1.1.1517625207.1678241755&semt=ais"></div>
+        </section>
+
+        <section>
+            <div class="kolom">
+                <h2>Live Coding</h2>
+                <p>Ingin mencoba langsung kode program python yang telah Anda pelajari? </p>
+                <p>Gunakan fitur “Live Coding“ untuk mencoba langsung kode program Python terkait materi perulangan dan percabangan.</p>
+                <p><a href="#" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
+            </div>
+            <div class="bok4"><img src="https://img.freepik.com/free-vector/woman-working-new-app_23-2148682102.jpg?size=626&ext=jpg&ga=GA1.2.1517625207.1678241755&semt=ais"></div>
+        </section>
+
+       
+
+    <div id="contact">
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer-section">
+                    <h3 id="about">About</h3>
+                    <p>Sebuah web yang dirancang untuk mempermudah belajar bahasa pemrograman python terutama terkait materi perulangan dan percabangan</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><b>M. Rifqi Azmi</b><a href="https://wa.me/+6281345982655">    (+6281345982655)</a></p>
+                    <p><b>Fauzia'Uddin</b><a href="https://wa.me/+6287843009849">  (+6287843009849)</a></p>
+                    <p><b>Akbar Maulana</b><a href="https://wa.me/+6287843009849"> (+628784300984)</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Social</h3>
+                    <p><b>Instagram :</b> @ashabulkahfi2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2023. <b>Ashabul Kahfi</b> All Rights Reserved.
+        </div>
+    </div>
+    </div>
+
+    
+    
+    
+<script>
+    var nama = sessionStorage.getItem("fullname");
+    var namaS = document.getElementById("nama");
+    namaS.innerText = nama;
+
+    
+
+</script>
+</body>
+</html>

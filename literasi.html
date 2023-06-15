@@ -99,7 +99,7 @@
             font-size: large;
             font-weight: bold;
             font-family:'Courier New', Courier, monospace;
-            margin-left: 100px;
+            margin-left: 180px;
         
         }
 
@@ -161,6 +161,90 @@
           margin-left: 1520px;
           margin-bottom: 10px;
         }
+    
+        @media only screen and (max-width: 480px) {
+  .navbar-info {
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+  }
+
+  .navbar-info img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .navbar-info a {
+    position: static;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .containers {
+    flex-direction: column;
+  }
+
+  
+
+  .content > div {
+    width: 90%;
+    height: 100px;
+    margin: 20px;
+    left: 200px;
+    box-shadow: none;
+  }
+
+  p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  button {
+    margin-left: 350px;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-info img {
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-info a {
+    bottom: 50px;
+  }
+
+  .navbar-menu {
+    left: -200px;
+  }
+
+  .containers {
+    flex-direction: column-reverse;
+  }
+
+  .content > div {
+    width: 80%;
+    left: 200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 100px;
+  }
+
+  p {
+    margin-left: 0;
+  }
+
+  button {
+    margin-left: 400px;
+    margin-right: auto;
+  }
+}
+
 
     </style>
 </head>
@@ -175,7 +259,7 @@
                 <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="literasi.html">Literasi</a></li>
-                <li><a href="latihan1.html">Latihan</a></li>
+                <li><a href="latihan1.html">Quiz</a></li>
                 <li><a href="Ujian.html">Ujian</a></li>
                 <li><a href="livecoding.html">Live Coding</a></li>
                 </ul>
@@ -186,8 +270,8 @@
     <button onclick="changeBackground()">Dark Mode & Default</button>
     <p>Pilihlah Materi Mana yang Ingin Anda Pelajari</p>
     <div class="content">
-        <div class="bok1"><img src="loops.jpg" alt="perulangan" width="80%" height="80%" style="margin-top: 30px;"></div>
-        <div class="bok2"><img src="cabang-transformed.png" alt="percabangan" width="80%" height="80%" style="margin-top: 30px;"></div>
+        <div class="bok1"><img src="perulangan_1.jpg" alt="perulangan" width="80%" height="80%" style="margin-top: 30px;"></div>
+        <div class="bok2"><img src="Percabangan_1.jpg" alt="percabangan" width="80%" height="80%" style="margin-top: 30px;"></div>
         <div class="bok3" style="height: 100px";><a href="perulangan.html"><h3>PERULANGAN (for/while)</h3></a></div>
         <div class="bok4" style="height: 100px";><a href="percabangan.html"><h3>PERCABANGAN (if)</h3></a></div>
 

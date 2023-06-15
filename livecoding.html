@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Coding</title>
+    <style>
+        body{
+            background-color: #DDE6ED;
+            margin: 0px;
+            padding: 0px;
+            padding-bottom: 100px;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body.clicked {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Open Sans',sans-serif;
+            background-color: rgb(45, 43, 43);
+            color: #FFFFFF;
+        }
+
+        .background{
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #2bd531;
+          color: #fff;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          margin-top: 20px;
+          font-size: small;
+          margin-left: 1250px;
+          margin-bottom: 10px;
+        }
+        
+        .navbar-info {
+            background-color: #526D82;
+            color: rgb(241, 0, 0);
+            text-align: right;
+            padding: 20px;
+            height: 20px;
+
+        }
+
+        .navbar-info img{
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            position: relative;
+            bottom: 15px;
+            right: 1350px;
+        }
+
+        
+        .navbar-info a:hover {
+            background: #fc5185;
+            text-decoration: underline;
+        }
+
+        .navbar-menu {
+        position: fixed;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        transition: left 0.8s;
+        text-align: center;
+        }
+
+        .navbar-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 100px;
+        }
+
+        .navbar-menu li {
+        margin-bottom: 10px;
+        }
+
+        .navbar-menu a {
+        color: black;
+        text-decoration: none;
+        }
+
+        .navbar-menu a:hover {
+        color: rgb(87, 87, 255);
+        }
+
+
+        .containers{
+            display: flex;
+        }
+
+        .contentKanan{
+          width: 90%;
+          height: 1000px;
+        }
+
+        
+        .border-box {
+            width: 600px;
+            height: 500px;
+            border: 4px solid #3e95ff; /* Warna border */
+            border-radius: 10px; /* Membuat sudut border melengkung */
+            padding: 20px; /* Jarak antara teks dengan border */
+            background-color: #f8f8f8; /* Warna latar belakang kotak */
+            position: relative;
+            left: 510px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+        }
+
+
+        /* CSS untuk teks di dalam kotak */
+        .border-box p {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333333; /* Warna teks */
+            text-align: center;
+        }
+
+
+        .live{
+          background-color: #415777;
+          margin: 75px;
+          margin-left: 330px;
+          border-radius: 15px;
+          font-family: Arial, Helvetica, sans-serif;
+          color: rgb(255, 248, 248);
+          text-align: center;
+          height: 50px;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+        }
+
+        .live > h1{
+            position: relative;
+            top: 8px;
+        }
+        
+
+        #copyright {
+            width: 100%;
+            padding: 5px 10px 20px;
+            text-align: center;
+            position: relative;
+            left: 100px;
+            top: 350px;
+        }
+    
+        .navbar-info button{
+           
+            background: #3f72af;
+            border-radius: 20px;
+            position: relative;
+            bottom: 70px;
+            border: none;
+            padding: 15px 20px 15px 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.25), 
+                            0 5px 3px rgba(0,0,0,0.22);
+        }
+        
+        .navbar-info button:hover {
+            background: #fc5185;
+            text-decoration: underline;
+        }
+
+     /* Media query max 480px */
+    @media screen and (max-width: 480px) {
+        .containers {
+            flex-direction: column;
+        }
+
+        .contentKiri {
+            width: 100%;
+        }
+
+        .navbar-menu {
+            width: 100%;
+            height: auto;
+            position: static;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .navbar-menu ul {
+            margin-top: 0;
+        }
+
+        .navbar-menu li {
+            margin-bottom: 20px;
+        }
+
+        .navbar-info img {
+            position: static;
+            display: block;
+            margin: 0 auto;
+            right: 0;
+        }
+
+        .border-box {
+            width: 100%;
+            left: 0;
+            margin: 0;
+            box-shadow: none;
+        }
+
+        .live {
+            margin: 20px;
+            margin-left: 0;
+        }
+
+        .live > h1 {
+            margin-top: 0;
+        }
+
+        .background {
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+        #copyright {
+            left: 0;
+            top: 0;
+        }
+    }
+
+    /* Media query max 768px */
+    @media screen and (max-width: 768px) {
+        .navbar-menu {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .navbar-menu ul {
+            margin-top: 10px;
+            
+        }
+
+        .navbar-info img {
+            right: 0;
+        }
+
+        .border-box {
+            left: 10px;
+            width: calc(100% - 20px);
+        }
+
+        .live {
+            margin: 200px;
+            margin-left: 0;
+            width: 80%;
+        }
+        .live h1{
+            position: relative;
+            top: 59px;
+            left: 150px;
+            color: #333333;
+        }
+
+        .background {
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+        #copyright {
+            left: 10px;
+            top: 350px;
+        }
+    }
+        
+    </style>
+
+    
+</head>
+<body  style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div class="navbar-info">
+        <img src="giphy.gif" alt="Animasi">
+        <li><button onclick="Signout()">Log Out</button></li>
+    </div>
+    <div class="containers">
+        <div class="contentKiri">
+            <div class="navbar-menu" id="navbarMenu">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="literasi.html">Literasi</a></li>
+                <li><a href="latihan1.html">Quiz</a></li>
+                <li><a href="Ujian.html">Ujian</a></li>
+                <li><a href="livecoding.html">Live Coding</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <button class="background" onclick="changeBackground()">Dark Mode & Default</button>
+    <div class="contentKanan">
+        <div class="live">
+          <h1>Live Coding</h1>
+    </div>
+
+    <div class="border-box">
+        <iframe src="https://trinket.io/embed/python/0582aea810" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+
+    </div>
+
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2023. <b>Ashabul Kahfi</b> All Rights Reserved.
+        </div>
+    </div>
+
+    <script>
+    const navbarMenu = document.getElementById('navbarMenu');
+    const content = document.getElementsByClassName('content')[0];
+
+    navbarMenu.addEventListener('mouseover', function() {
+      navbarMenu.style.left = '0';
+      ;
+    });
+
+    navbarMenu.addEventListener('mouseout', function() {
+      navbarMenu.style.left = '-200px';
+      content.style.marginLeft = '0';
+    });
+
+    function changeBackground() {
+            document.body.classList.toggle("clicked");
+            document.p.classList.toggle("clicked");
+
+        }
+    
+    function Signout(){
+            sessionStorage.removeItem('usernamep');
+            sessionStorage.removeItem('fullname');
+            sessionStorage.removeItem('password');
+
+
+            localStorage.removeItem('usernamep');
+            localStorage.removeItem('fullname');
+            localStorage.removeItem('password');
+
+
+            localStorage.removeItem('keepLoggedIn');
+            window.location="loginsiswa.html"
+        }
+    </script>
+    
+</body>
+</html>
+
+

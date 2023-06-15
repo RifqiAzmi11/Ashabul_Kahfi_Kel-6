@@ -1,0 +1,493 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+    <title>Home Pengajar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <style>
+
+
+      .navbar-info {
+            background-color: #526D82;
+            text-align: right;
+            padding: 35px;
+            height: 20px;
+            width: auto;
+    }
+
+      .navbar-info img{
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            position: relative;
+            bottom: 25px;
+            right: 1370px;
+    }
+
+
+
+      .navbar-menu {
+        position: fixed;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        transition: left 0.8s;
+        text-align: center;
+    }
+
+      .navbar-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 100px;
+    }
+
+      .navbar-menu li {
+        margin-bottom: 10px;
+    }
+
+      .navbar-menu a {
+        color: black;
+        text-decoration: none;
+    }
+
+      .navbar-menu a:hover {
+        color: rgb(87, 87, 255);
+    }
+
+      #copyright {
+            position: absolute;
+            left: 670px;
+            margin-top: 100px;
+           padding-bottom: 20px;
+    }
+      .background{
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #2bd531;
+          color: #fff;
+          border: none;
+          border-radius: 15px;
+          cursor: pointer;
+          margin-top: 25px;
+          font-size: small;
+          margin-left: 1250px;
+          margin-bottom: 10px;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+
+    }
+
+      body.clicked {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Open Sans',sans-serif;
+            background-color: rgb(51, 51, 51);
+            color: #FFFFFF;
+    }
+
+      .navbar-info button{
+            
+           width: 100px;
+           height: 30px;
+           background: #3f72af;
+           border-radius: 20px;
+           position: relative;
+           left: 20px;
+           bottom: 70px;
+           border: none;
+           padding: 20px 20px 15px 20px;
+           color: #FFFFFF;
+           cursor: pointer;
+           font-weight: bold;
+           box-shadow: 0 5px 5px rgba(0,0,0,0.25), 
+                           0 5px 3px rgba(0,0,0,0.22);
+    }
+
+      .navbar-info button p{
+        font-size: medium;
+        width: 200px;
+        position: relative;
+        right: 69px;
+        bottom: 15px;
+       
+    }
+       
+      .navbar-info button:hover {
+           background: #fc5185;
+           text-decoration: underline;
+    }
+
+      label{
+        display: inline-block; 
+        width: 80px;
+      }
+      h3{
+        text-align: center;
+        position: relative;
+        bottom: -40px;
+        color: white;
+        font-family: serif;
+      }
+
+      .card{
+        width: 100%;
+        font-size: 15px;
+        position: relative;
+        left: 100px;
+        margin-top: 20px;
+      }
+      .card-body{
+        padding-right: 200px;
+        width: 100%;
+      }
+      #ukuran_materi{
+        width: 1000px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+        margin-left: 200px;
+      }
+
+      @media (max-width: 480px) {
+        label{
+          display: inline-block; 
+          width: 80px;
+        }
+        h3{
+          text-align: center;
+          position: relative;
+          bottom: 40px;
+          color: white;
+          font-family: serif;
+        }
+
+        .background_home{
+          width: 500px;
+          justify-content: center;
+          align-items: center;
+          background-color: #DDE6ED !important;
+          
+      }
+
+      
+      .card{
+        width: 100%;
+        font-size: 10px;
+      }
+  }
+
+  @media only screen and (max-width: 768px) {
+    label{
+        display: inline-block; 
+        width: 80px;
+      }
+      h3{
+        text-align: center;
+        position: relative;
+        bottom: -40px;
+        color: white;
+        font-family: serif;
+      }
+
+      .background_home{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #DDE6ED !important;
+        margin-right: 10px;
+    }
+  }
+    </style>
+  </head>
+
+  <body class="background_home" style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+      <div class="navbar-info">
+          <img src="giphy.gif" alt="Animasi">
+          <li><button onclick="Signout()"><p>Logout</p></button></li>
+      </div>
+      <div class="containers">
+          <div class="contentKiri">
+              <div class="navbar-menu" id="navbarMenu">
+                  <ul>
+                  <li><a href="indexguru.html">Home</a></li>
+                  <li><a href="literasi.html">Literasi</a></li>
+                  <li><a href="latihan1.html">Latihan</a></li>
+                  <li><a href="Ujian.html">Ujian</a></li>
+                  <li><a href="livecoding.html">Live Coding</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <button class="background" onclick="changeBackground()">Dark Mode & Default</button>
+
+
+<!-- Kode awal dari materi -->
+<div class="card" id="ukuran_materi" style="background-color: rgba(128, 128, 128, 0.4);">
+  <div class="card-body" >
+
+    <!-- Konten Tabel -->
+        <div class="row" >
+          <div class="col-lg-12">
+            <div class="card border border-primary" style="background-color: rgba(128, 128, 128, 0.2) !important;">
+              <div class="card-header bg-transparent border-primary" style="background-color: rgba(128, 128, 128, 0.2) !important;">
+                
+                <h5 class="text-center" style="color: black;">
+                  Tabel Data Siswa
+                </h5>
+                <hr class="garis1">
+                <hr class="garis2"> 
+                
+                              <p></p>
+                                <div class="table-responsive-sm">
+                                  <table class="table table-dark table-striped">
+                                    <thead class="text-center">
+                                      <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>NIM</th>
+                                        <th>Kelas</th>
+                                        <th>Username</th>
+                                        <th>Password</th>
+                                        <th>Aksi</th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody id="tbody1" class="text-center"></tbody>
+                                  </table>
+                                </div>
+
+                                <!-- Modal Tambah Kelas -->
+                                <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog modal-dialog-centered " >
+                                    <div class="modal-content" style="background-color: white;">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title fw-bold text-dark " id="exampleModalLabel">TAMBAH KELAS</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body" >
+                                        <div class="popup add">
+                                          <form action="" style="background-color: white;">
+                                            <div class="mb-3">
+                                              <label>Kelas :</label>
+                                              <input type="text" class="form-control" id="namaKelas">
+                                            </div>
+                                            <div class="mb-3">
+                                              <label>Token :</label>
+                                              <input type="text" class="form-control" id="tokenKelas">
+                                            </div>
+                                          
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Kembali</button>
+                                              <button type="submit" class="btn btn-success">Tambah</button>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                           
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+<div id="copyright">
+  <div class="wrapper">
+      &copy; 2023. <b>Ashabul Kahfi</b> All Rights Reserved.
+  </div>
+</div>
+
+<!-- FIREBASE -->
+ <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+   // TODO: Add SDKs for Firebase products that you want to use
+  import { getDatabase, ref, set, push, get, child, onValue, update, remove } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig ={
+        apiKey: "AIzaSyCLlzxfLBW8bkOlzQqD_lubfjSflXIbK9M",
+        authDomain: "tugaspraktikum11.firebaseapp.com",
+        projectId: "tugaspraktikum11",
+        storageBucket: "tugaspraktikum11.appspot.com",
+        messagingSenderId: "763005655602",
+        appId: "1:763005655602:web:1a782c3a5c0c9dbd557a2b"
+  };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+                              const usersRef = ref(db, "UserList/");
+
+                              let idnya = [];
+                
+                              let tmp = document.querySelector('#tbody1');
+                              tmp.innerHTML = "";
+                              let kelas = document.getElementById('kelasInp');
+                              let nama = document.getElementById('nameInp');
+                              let nim = document.getElementById('nimInp');
+                              let password = document.getElementById('passInp');
+                              let kelasT = document.getElementById("namaKelas");
+                              let token = document.getElementById("tokenKelas");
+
+                              console.log(kelasT.value);
+
+                              let kelasfix = "";
+                              let cek11 = 0;
+
+                          
+                          onValue(ref(db, "UserList/"), (snapshot) => {
+                                console.log(snapshot.val());
+                                tmp.innerHTML = "";
+                                var no = 1;
+                                const users = snapshot;
+                                users.forEach(user => {
+                                  const userVal = user.val();
+                                  
+                                    let tr = `
+                                          <tr data-id = ${user.key}>
+                                          <td>${no}</td>
+                                          <td>${userVal.fullname}</td>
+                                          <td>${userVal.nim}</td>
+                                          <td>${userVal.class}</td>
+                                          <td>${userVal.username}</td>
+                                          <td>${userVal.password}</td>
+                                          
+                                          <td>
+                                            <button class="delete btn btn-danger">Hapus</button>
+                                          </td>
+                                        <tr>
+
+                                        `;
+                        
+                                  tmp.innerHTML += tr;
+                                  no++;
+                                })
+                                //Delete
+                              
+                                let deleteButtons = document.querySelectorAll(".delete");
+                                deleteButtons.forEach((deleteBtn) => {
+                                  deleteBtn.addEventListener("click", () => {
+                                      console.log(deleteButtons);
+                                      Swal.fire({
+                                      title: 'Apa kamu yakin mengapus data?',
+                                      text: '',
+                                      icon: 'question',
+                                      showCancelButton: true,
+                                      confirmButtonColor: '#3085d6',
+                                      cancelButtonColor: '#d33',
+                                      confirmButtonText: 'Iya',
+                                      cancelButtonText: 'Batal',
+                                    }).then((result) => {
+                                      if (result.value) {
+
+                                        const db = getDatabase();
+                                        let userId = deleteBtn.parentElement.parentElement.dataset.id;
+                                        console.log(userId);
+                                        remove(ref(db, "UserList/" + userId));
+                                        
+                                        Swal.fire({
+                                          title: "Selamat!",
+                                          text: "Data berhasil dihapus.",
+                                          icon: "success",
+                                          button: "Lanjutkan",
+                                        });
+                                        
+                                      }
+                                    });
+                                  
+                                  
+                                  });
+                                });
+                          });
+                   
+                          
+
+                        
+            
+                            </script>
+<script>
+// ---------------------References----------------
+
+    let userlink = document.getElementById('userlink');
+    let sugnoutlink = document.getElementById('signoutlink');
+    let header = document.getElementById('hh');
+    var currentUser = null;
+    var currentFullName = null;
+    // let nameuser = sessionStorage.getItem('username');
+    
+
+
+// ----------------------Function-----------------
+
+    function getUsername(){
+      let keepLoggedIn = localStorage.getItem("keepLoggedIn");
+
+      if(!keepLoggedIn == "yes"){
+        currentUser = localStorage.getItem('usernamep');
+        currentFullName = localStorage.getItem('fullname');
+      }
+
+      else{
+        currentUser = sessionStorage.getItem('usernamep');
+        currentFullName = sessionStorage.getItem('fullname');
+
+        
+      }
+    }
+    
+        navbarMenu.addEventListener('mouseover', function() {
+        navbarMenu.style.left = '0';
+        ;
+        });
+
+        navbarMenu.addEventListener('mouseout', function() {
+        navbarMenu.style.left = '-200px';
+        content.style.marginLeft = '0';
+        });
+        
+        function changeBackground() {
+            document.body.classList.toggle("clicked");
+            document.p.classList.toggle("clicked");
+
+        }
+        function Signout(){
+            sessionStorage.removeItem('usernamep');
+            sessionStorage.removeItem('fullname');
+            sessionStorage.removeItem('password');
+
+
+            localStorage.removeItem('usernamep');
+            localStorage.removeItem('fullname');
+            localStorage.removeItem('password');
+
+
+            localStorage.removeItem('keepLoggedIn');
+            window.location="loginsiswa.html"
+        }
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </body> 
+
+</html>
+
+
+
