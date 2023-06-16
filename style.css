@@ -1,0 +1,572 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+.menu button{
+           
+    background: #3f72af;
+    border-radius: 20px;
+    position: relative;
+    border: none;
+    padding: 15px 20px 15px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25), 
+                    0 5px 3px rgba(0,0,0,0.22);
+    
+}
+
+  
+.menu button:hover {
+    background: #fc5185;
+    text-decoration: underline;
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans',sans-serif;
+    background-color: #DDE6ED;
+}
+body.clicked {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans',sans-serif;
+    background-color: rgb(45, 43, 43);
+    color: #FFFFFF;
+}
+
+.background{
+    width: 100px;
+    height: 40px;
+    background-color: #2bd531;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 10px;
+    position: absolute;
+    margin-top: 10px;
+    left: 1400px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 8px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+.background p{
+    position: relative;
+    bottom: 10px;
+}
+
+.wrapper {
+    width: 1600px;
+    margin: auto;
+    position: relative;
+}
+
+.wrapper img {
+    border-radius: 25px;
+    width: 500px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+}
+.logo a{
+    font-size: 50px;
+    font-weight: 800;
+    float: left;
+    font-family: courier;
+    color: #364f6b;
+    margin-left: 40px;
+}
+
+.menu {
+    float: right;
+    margin-right: 10px;
+    
+    
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 0;
+    background: #FFFFFF;
+    z-index: 1;
+    border-bottom:1px solid #364f6b;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: 50px;
+    display: flex;
+    margin-bottom: 70px;
+    
+}
+
+.kolom {
+    margin-bottom: 170px;
+    margin-left: 50px;
+
+}
+
+.kolom > .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+    
+    margin-top: 150px;
+}
+.kolom > h2{
+    font-family: 'comic sans ms';
+    font-size: 35px;
+    
+    width: 100%;
+    line-height: 50px;
+    margin-bottom: 20px;
+
+
+}
+
+
+a.tbl-biru {
+    background: #3f72af;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25), 
+                    0 5px 3px rgba(0,0,0,0.22);
+}
+
+a.tbl-biru:hover {
+    background: #fc5185;
+    text-decoration: none;
+}
+
+a.tbl-pink {
+    background: #fc5185;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.tbl-pink:hover {
+    background: #3f72af;
+    text-decoration: none;
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+
+
+#contact {
+    background: #dedede;
+    padding:50px 0px 50px 0px;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.footer-section {
+    width: 20%;
+    margin: 0 auto;
+}
+.footer-section > p{
+    font-size: larger;
+    color: black;
+}
+
+
+h3 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #364f6b;
+    width: 100%;
+    line-height: 50px;
+}
+
+.dataDiri a{
+    background: #3f72af;
+    border-radius: 20px;
+    padding: 15px 20px 15px 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+.dataDiri a:hover{
+    background-color: #fc5185;
+}
+.progress a{
+        background: #3f72af;
+        border-radius: 20px;
+        padding: 15px 20px 15px 20px;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-weight: bold;
+        margin-left: 10px;
+}
+
+.progress a:hover{
+    background-color: #fc5185;
+}
+
+
+#copyright {
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+    margin-top: 50px;
+}
+.bok1 > img{
+    width: 490px;
+    margin-left: 345px;
+    margin-top: 240px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+}
+.bok2 > img{
+    margin-left: 240px;
+    margin-top: 50px;
+    width: 490px;
+    height: 390px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+}
+.bok3 > img{
+    margin-left: 120px;
+    margin-top: 20px;
+    width: 500px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+    
+}
+
+.bok4 > img{
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 500px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Open Sans',sans-serif;
+        background-color: #DDE6ED;
+    }
+    .wrapper {
+        width: 50%;
+    }
+
+    .wrapper img {
+        border-radius: 25px;
+        width: 200px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                        0 10px 10px rgba(0,0,0,0.22);
+        position: relative;
+        right: 50px;
+    }
+
+
+
+    .logo a {
+        font-size: 40px;
+        font-weight: 800;
+        float: left;
+        font-family: courier;
+        color: #364f6b;
+        position: relative;
+        left: 20px;
+    }
+
+    nav .menu {
+        width: 140%;
+        margin: 0;
+        position: relative;
+        left: 100px;
+    }
+
+    nav .menu ul {
+        text-align: center;
+        margin: auto;
+        line-height: 60px;
+    }
+
+    nav .menu ul li {
+        display: inline-block;
+        float: none;
+    }
+
+    section {
+        display: block;
+        
+    }
+
+    section img {
+        display: block;
+        width: 10%;
+        height: auto;
+        margin-left: 100px;
+    }
+    .bok1 > img{
+        width: 300px;
+        margin-left: 60px;
+        margin-top: -100px;
+        margin-bottom: 100px;
+    }
+    .bok2 > img{
+        margin-left: 60px;
+        margin-top: -100px;
+        width: 300px;
+        margin-bottom: 100px;
+        height: 250px;
+    }
+    .bok3 > img{
+        margin-left: 60px;
+        margin-top: -100px;
+        width: 300px;
+    }
+    .bok4 > img{
+        margin-left: 60px;
+        margin-top: -100px;
+        width: 300px;
+    }
+
+    .footer-section {
+        width: 35%;
+        margin: 0 auto;
+    }
+    .footer-section > p{
+        font-size: small;
+    }
+    .kolom > .deskripsi {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'comic sans ms';
+        color: #364f6b;
+        margin-top: 30px;
+        text-align: center;
+        position: relative;
+        right: 20px;
+    }   
+    .kolom > h2{
+        font-family: 'comic sans ms';
+        font-size: 35px;
+        color: #364f6b;
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+        position: relative;
+        right: 10px;
+    }
+
+    
+    
+    #contact {
+        background: #dedede;
+        padding:20px 10px 50px 5px;
+    }
+
+    .footer {
+        width: 100%;
+        position: relative;
+        margin: auto;
+    }
+    
+    .footer-section {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .background{
+        width: 100px;
+        height: 40px;
+        background-color: #2bd531;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 10px;
+        position: absolute;
+        margin-top: 10px;
+        left: 650px;
+        font-weight: bold;
+        padding-left: 10px;
+        padding-right: 8px
+    
+    }
+    
+    .background p{
+        position: relative;
+        bottom: 10px;
+    }
+}
+    
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
+      max-width: 100%;
+    }
+  
+    .wrapper img {
+      width: 100%;
+      position: relative;
+      left: -85px;
+    }
+  
+    .logo a {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+  
+    .nav ul li a {
+      padding: 0px 8px 0px 8px;
+      position: relative;
+      
+    }
+  
+    nav .menu {
+        width: 140%;
+        margin: 0;
+        position: relative;
+        left: 50px;
+    }
+    section {
+      margin: 20px 10px;
+      display: block;
+    }
+  
+    .kolom {
+      margin-bottom: 50px;
+      margin-left: auto;
+    }
+  
+    .kolom > .deskripsi {
+      margin-top: 20px;
+      font-size: small;
+      position: relative;
+      left: 8px;
+    }
+  
+    .kolom > h2 {
+      font-size: 25px;
+      line-height: 35px;
+      position: relative;
+      left: 20px;
+    }
+    
+    .kolom p{
+        font-size: 10px;
+        margin-left: 35px;
+    }
+    .bok1 > img {
+      margin-left: 90px;
+      margin-top: 20px;
+    }
+  
+    .bok2 > img {
+      margin-left: 90px;
+      margin-top: 20px;
+      height: auto;
+    }
+  
+    .bok3 > img {
+      margin-left: 90px;
+      margin-top: 20px;
+      width: 100%;
+    }
+  
+    .bok4 > img {
+      margin-left: 80px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+  #copyright {
+    text-align: center;
+    
+    padding: 5px 0px 30px 0px;
+    margin-top: 50px;
+    font-size: small;
+    }
+
+    .background{
+        width: 70px;
+        height: 30px;
+        background-color: #2bd531;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 8px;
+        position: absolute;
+        margin-top: 10px;
+        left: 320px;
+        font-weight: bold;
+        padding-left: 10px;
+        padding-right: 8px
+    
+    }
+    
+    .background p{
+        position: relative;
+        bottom: 14px;
+    }
+}
+
+
+
